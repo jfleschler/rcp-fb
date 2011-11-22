@@ -8,6 +8,8 @@ gem "bson_ext", "~> 1.4"
 gem 'omniauth'
 gem 'omniauth-facebook'
 
+gem 'fb_graph'
+
 gem 'jquery-rails'
 
 # Gems used only for assets and not required
