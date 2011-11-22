@@ -42,13 +42,17 @@ module SessionsHelper
 		redirect_to signin_path, :notice => "please sign in."
 	end
 
-	private
-		
-		def user_from_remember_token
-			User.authenticate_with_salt(*remember_token)
-		end
+	def redirect_back_or(default)
+  		redirect_to(session[:return_to] || default)
+    	clear_return_to
+  	end
 
-		def remember_token
-			cookies.signed[:remember_token] || [nil, nil]
-		end
+	private
+		def store_location
+	      session[:return_to] = request.fullpath
+	    end
+
+	    def clear_return_to
+	      session[:return_to] = nil
+	    end
 end
