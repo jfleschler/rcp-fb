@@ -21,4 +21,8 @@ class User
       end
     end
   end
+
+  def friends
+	FbGraph::User.fetch(uid, :access_token => access_token).friends 
+  end
 end

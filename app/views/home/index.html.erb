@@ -1,6 +1,6 @@
 <h3>Home</h3>
 <% unless @users.nil? %>
 <% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user.id %> has (<%= user.friends.count %> friends</p>
+  <p>User: <%=link_to user.name, user %> has (<%= user.friends.count %> friends</p>
 <% end %>
 <% end %>
