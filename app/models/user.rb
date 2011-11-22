@@ -2,7 +2,7 @@ class User
   include Mongoid::Document
   field :provider, :type => String
   field :uid, :type => String
-  field :access_token => String
+  field :access_token, :type => String
   field :name, :type => String
   field :email, :type => String
 
