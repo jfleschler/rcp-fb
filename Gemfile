@@ -18,7 +18,7 @@ group :assets do
 end
 
 group :production do
-  gem 'therubyracer'
+  #gem 'therubyracer'
 end
 
 gem 'jquery-rails'
