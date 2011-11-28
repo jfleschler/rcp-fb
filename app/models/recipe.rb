@@ -13,8 +13,6 @@ class Recipe
   default_scope order(:id)
 	scope :public, lambda { where(:public => true) }
 
-	before_destroy :remove_ingredient
-
 	def step_attributes=(step_attributes)
 	  step_attributes.each do |attributes|
 	    steps.build(attributes)
@@ -23,13 +21,6 @@ class Recipe
 
 	def temperature
 		"#{cook_temp.to_s}#{temp_unit.to_s}"
-	end
-
-	def remove_ingredient
-		unless has_ingredient == nil
-			i = Ingredient.find(has_ingredient)
-			i.destroy
-		end
 	end
 
 	def recipes_as_ingredients
