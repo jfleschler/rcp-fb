@@ -8,6 +8,9 @@ class Association
 
   before_destroy :renumber_remaining
 
+  scope :ordered, lambda { order(:position) }
+	scope :list, lambda { joins(:ingredient).where("ingredients.recipe_id is null").order(:ingredient_id) }
+
   def ingredient
   	Ingredient.find(ingredient_id)
   end
