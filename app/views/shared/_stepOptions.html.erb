@@ -1,0 +1,10 @@
+<% unless step == @recipe.steps.first %>
+	<div class="arrow_up">
+		<%= arrow_up_tag @recipe, step %>
+	</div>
+<% end %>
+<% unless step == @recipe.steps.last %>
+	<div class="arrow_down">
+		<%= arrow_down_tag @recipe, step %>
+	</div>
+<% end %>

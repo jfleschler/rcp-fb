@@ -1,0 +1,21 @@
+<script>
+	var toolbox = $('div.ingredient_toolbox');
+
+	$('img.newIngredient').click(
+		function() {
+			$('#associations_activeStep').val($(this).attr('id'));
+			toolbox.slideToggle("slow");
+		}
+	);
+
+	$('img.ingredient').qtip({
+		position: {
+	      my: 'top middle', 
+	      at: 'bottom middle'
+	   },
+	   style: { 
+	      tip: true,
+	      classes: 'ui-tooltip-dark ui-tooltip-rounded'
+	   }
+	});
+</script>

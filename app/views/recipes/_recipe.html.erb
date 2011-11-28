@@ -1,0 +1,10 @@
+<div class="main_recipe">
+	<header>
+		<h1><%= @recipe.name %></h1>
+		<hr />
+	</header>
+	<div class="span12 columns">
+		<h3>steps</h3>
+		<%= render @recipe.steps.ordered %>
+	</div>
+</div>

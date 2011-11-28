@@ -1,0 +1,23 @@
+<% if current_user && current_user.id == @recipe.user_id %>
+	<div id="editbar" class="topbar" >
+	    <div class="container"> 
+			<ul class="nav secondary-nav">
+				<li><%= link_to "( edit )", edit_recipe_path(@recipe) %></li>
+				<li>&nbsp;</li>
+			</ul>
+		</div>
+	</div>
+<% end %>
+
+<div class="container edit">
+<div class="container-fluid">
+	<div class="sidebar">
+		<%= render :partial => 'ingredientList' %>
+	</div>
+	<div class="content">
+		<div class="row">
+			<%= render @recipe %>
+		</div>
+	</div>
+</div>
+</div>

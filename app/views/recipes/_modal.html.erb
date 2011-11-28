@@ -1,0 +1,16 @@
+<div class="modal addIngredient" > 
+  <div class="modal-header"> 
+    <h3>how much?</h3> <div id="ingredient_name"></div>
+    <a href="#" class="close">&times;</a> 
+  </div> 
+  <div class="modal-body"> 
+  	<%= image_tag 'placeholder.png', :id => "selectedImage", :class => "ingredient" %>
+    <%= f.text_field :amount, :class => "mini" %>
+    <%= f.select :amount_unit, options_for_select(['','c.','tsp.','tbl.','oz.']) %>
+  </div> 
+  <div class="modal-footer"> 
+  	<%= f.submit "ok", :class => "btn primary", :id => "submitIngredient" %>
+    <a href="#" class="btn secondary" id="nevermind" >nevermind</a> 
+  </div> 
+</div> 
+<div id="mask"></div>

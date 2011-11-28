@@ -1,0 +1,6 @@
+$('#allsteps').html("<%= escape_javascript(render('recipes/step_edit')) %>");
+$('.sidebar').html("<%= escape_javascript(render('recipes/ingredientList')) %>");
+
+$('#associations_amount').val('');
+$('#associations_selectedIngredient').val('');
+$('#associations_activeStep').val('');

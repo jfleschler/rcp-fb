@@ -1,0 +1,9 @@
+
+<%= form_for :associations, :url => new_association_path, :method => 'get', :remote => true do |f| %>
+     <%= f.hidden_field :recipe, :value => @recipe.id %>
+     <%= f.hidden_field :activeStep %>
+     <%= f.hidden_field :selectedIngredient %>
+
+     <%= render :partial => 'modal', :locals => {:f => f} %>
+     <%= render :partial => 'toolbox' %>
+<% end %>

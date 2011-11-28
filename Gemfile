@@ -9,6 +9,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 
 gem 'fb_graph'
+gem 'will_paginate'
 
 gem 'jquery-rails'
 

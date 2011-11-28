@@ -1,4 +1,14 @@
-<h3>User Profile</h3>
-<p>Uid: <%= @user.uid %></p>
-<p>Name: <%= @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
+<div class="container">
+<% if @user == current_user %>
+	<h3 class="user_title"><%= mine_or_theirs @user %> recipes</h3>
+	<%= link_to "new recipe", '#', :class => "btn primary new" %>
+	<%= render :partial => 'shared/new_recipe_modal', :locals => {:recipe => @recipe}%>
+<% else %>
+	<h3><%= mine_or_theirs @user %> recipes</h3>
+<% end %>
+<hr />
+
+<div id="allrecipes">
+	<%= render :partial => 'shared/recipes_list', :locals => { :recipes => @recipes } %>
+</div>
+</div>

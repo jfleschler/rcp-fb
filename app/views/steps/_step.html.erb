@@ -1,0 +1,26 @@
+<div class="row stepline">
+	<div class="span1 column offset1 stepnum">
+		<div>
+			<h2><%= step.number_string %></h2>
+		</div>
+	</div>
+
+	<div class="span10 columns">
+		<div class="row">
+			<div class="span8 columns note"><%= step.note %></div>
+		</div>
+		<div class="row">
+			<% step.associations.ordered.each do |association| %>
+			<div class="span1 column padright">
+				<div class="association">
+					<% unless association.ingredient.recipe_id.nil? %>
+						<%= link_to (render association), recipe_path(association.ingredient.recipe_id) %>
+					<% else %>
+						<%= render association %>
+					<% end %>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>

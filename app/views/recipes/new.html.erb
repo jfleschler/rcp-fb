@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="span12 columns">
+		<h2>new recipe</h2>
+	</div>
+</div>
+<div class="row">
+<div class="span12 columns">
+	<%= form_for(@recipe) do |f| %>
+		<div class="form-stacked">
+			<nobr>
+				<%= f.label :name, "recipe name" %>
+				<%= f.text_field :name, :class => "xlarge" %>
+				<%= f.submit "create", :class => "btn primary" %>
+			</nobr>
+		</div>
+	<% end %>
+	</div>
+</div>
