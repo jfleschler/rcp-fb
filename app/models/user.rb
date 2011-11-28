@@ -8,7 +8,7 @@ class User
 
   attr_protected :provider, :uid, :access_token, :name, :email
 
-  has_many :recipes, :dependent => :destroy
+  has_many :recipes
 
   def self.create_with_omniauth(auth)
     create! do |user|
