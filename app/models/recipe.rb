@@ -6,7 +6,7 @@ class Recipe
   field :public, :type => Boolean, :default => false
   field :cook_temp,   :type => String
   field :cook_time,   :type => String
-  field :cook_unit,   :type => String
+  field :temp_unit,   :type => String
 
   belongs_to :user
 
