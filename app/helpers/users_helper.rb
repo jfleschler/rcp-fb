@@ -3,7 +3,7 @@ module UsersHelper
 		if user == current_user
 			"my"
 		else
-			"#{@user.username}'s"
+			"#{@user.name}'s"
 		end
 	end
 end
