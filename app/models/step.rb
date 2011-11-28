@@ -1,10 +1,10 @@
-class Association
+class Step
   include Mongoid::Document
   field :step_num,  :type => Integer
   field :note,  	:type => String
 
   has_many :associations, :dependent => :destroy
-  has_many :ingredients, :through => :associations
+  #has_many :ingredients, :through => :associations
 
   before_destroy :renumber_remaining
 
