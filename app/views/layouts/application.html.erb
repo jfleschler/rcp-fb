@@ -31,7 +31,7 @@
 	    	</ul>
 	      	<ul class="nav secondary-nav">
 	      		<% if !signed_in? %>
-		      		<li><%= link_to "sign in", signin_path, :class => "fb-login-button" %></li>
+		      		<li><%= link_to content_tag(:div, "log in", :class => "fb-login-button"), signin_path %></li>
 	      		<% else %>
 		            <li class="menu"> 
 		              <a href="#" class="menu"><%= current_user.name %></a> 

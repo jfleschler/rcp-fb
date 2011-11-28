@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
   def destroy
 	  reset_session
-	  redirect_to root_url, :notice => 'Signed out!'
+	  redirect_to root_url, :notice => 'signed out!'
   end
 
   def new
@@ -17,6 +17,6 @@ class SessionsController < ApplicationController
   end
 
   def failure
-    redirect_to root_url, :alert => "Authentication error: #{params[:message].humanize}"
+    redirect_to root_url, :alert => "authentication error: #{params[:message].humanize}"
   end
 end
