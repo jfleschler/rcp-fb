@@ -3,7 +3,7 @@
 <% @recipes.each do |recipe| %>
 	<div class="row <%= cycle("odd","even") %> <%= is_last? recipe, @recipes.last %>">
 		<div class="span1 column center">
-			<% if @user && @user == current_user && @user.recipes.find(recipe) %>
+			<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
 				<%= public_private_button recipe %>
 			<% end %>
 		</div>

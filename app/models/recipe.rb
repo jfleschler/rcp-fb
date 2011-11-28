@@ -10,7 +10,7 @@ class Recipe
 
   belongs_to :user
 
-  #default_scope order_by([:id, :asc])
+  default_scope order_by([:id, :asc])
 	scope :public, lambda { where(:public => true) }
 
 	def step_attributes=(step_attributes)
