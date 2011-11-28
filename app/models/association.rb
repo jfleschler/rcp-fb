@@ -8,7 +8,7 @@ class Association
 
   before_destroy :renumber_remaining
 
-scope :ordered, lambda { order_by([:position, :asc]) }
+  scope :ordered, lambda { order_by([:position, :asc]) }
 	scope :list, lambda { joins(:ingredient).where("ingredients.recipe_id is null").order_by([:ingredient_id, :asc]) }
 
   def ingredient
@@ -24,6 +24,5 @@ scope :ordered, lambda { order_by([:position, :asc]) }
 	  		  a.position = a.position - 1
 			  a.save
 			end
-		  end
-	  	end
+	  end
 end
