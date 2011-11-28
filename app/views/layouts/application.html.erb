@@ -8,6 +8,17 @@
   <%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? %>
 </head>
 <body>
+
+<script>
+  // Load the FB SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     d.getElementsByTagName('head')[0].appendChild(js);
+   }(document));
+</script>
+
 <div class="topbar"> 
   	<div class="fill"> 
 	    <div class="container"> 
@@ -43,14 +54,6 @@
 
 <%= yield %>
 <!--<%= debug(params) if Rails.env.development? %>-->
-<script>
-  // Load the SDK Asynchronously
-  (function(d){
-     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-     js = d.createElement('script'); js.id = id; js.async = true;
-     js.src = "//connect.facebook.net/en_US/all.js";
-     d.getElementsByTagName('head')[0].appendChild(js);
-   }(document));
-</script>
+
 </body>
 </html>
