@@ -8,9 +8,6 @@
   <%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? %>
 </head>
 <body>
-
-<script src="http://connect.facebook.net/en_US/all.js"></script>
-
 <div class="topbar"> 
   	<div class="fill"> 
 	    <div class="container"> 
@@ -23,7 +20,7 @@
 	    	</ul>
 	      	<ul class="nav secondary-nav">
 	      		<% if !signed_in? %>
-		      		<li><%= link_to content_tag(:div, "log in", :class => "fb-login-button"), signin_path %></li>
+		      		<li><%= fb_login_btn %></li>
 	      		<% else %>
 		            <li class="menu"> 
 		              <a href="#" class="menu"><%= current_user.name %></a> 
