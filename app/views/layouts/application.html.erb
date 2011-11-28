@@ -20,7 +20,7 @@
 	    	</ul>
 	      	<ul class="nav secondary-nav">
 	      		<% if !signed_in? %>
-		      		<li><%= link_to "sign in", signin_path %></li>
+		      		<li><%= link_to "sign in", signin_path, :class => "fb-login-button" %></li>
 	      		<% else %>
 		            <li class="menu"> 
 		              <a href="#" class="menu"><%= current_user.name %></a> 
@@ -43,5 +43,14 @@
 
 <%= yield %>
 <!--<%= debug(params) if Rails.env.development? %>-->
+<script>
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     d.getElementsByTagName('head')[0].appendChild(js);
+   }(document));
+</script>
 </body>
 </html>
