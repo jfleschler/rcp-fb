@@ -1,0 +1,497 @@
+.combine {
+  position: absolute;
+	font-size: 1.75em;
+	display: block;
+  left: 42px;
+  top: 6px;
+}
+
+.association {
+  float: left;
+}
+
+#step-list {
+  margin: 0;
+  li {
+    list-style: none;
+  }
+}
+
+.step {
+  display: inline;
+
+  li {
+    float: left;
+    list-style: none;
+    padding-right: 25px;
+      position: relative;
+
+    .rem_association {
+        position: absolute;
+        display: none;
+        left: 36px;
+        top: -3px;
+    }
+
+    &:hover .rem_association{
+      display: block;
+    }
+  }
+}
+
+div.message {
+  position: absolute;
+}
+
+div.warning, div.alert {
+  width: 100%;
+  background: red;
+  color: white;
+  text-align: center;
+}
+
+div.notice {
+  width: 100%;
+  background: green;
+  color: black;
+  text-align: center;
+}
+
+
+
+.padright {
+  position: relative;
+  padding-right: 0;
+  height: 50px;
+}
+
+.main_recipe {
+  position: relative;
+}
+
+.recipe_settings {
+  float: left;
+  color: black;
+
+  .row {
+    padding: 0;
+    margin: 0;
+    margin-bottom: -5px;
+  }
+
+  .column, .columns {
+    padding: 0;
+    margin: 0;
+  }
+   
+  .move_up {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.ingredient_list {
+  float: left;
+  color: black;
+  hr {
+    margin-bottom: -3px;
+  }
+
+  .row {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.center {
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+.btn.small {
+  padding: {
+    left: 5px;
+    right: 5px;
+    top: 1px;
+    bottom: 1px;
+  }
+  text-align: center;
+  width: 40px;
+  font-size: 10px;
+}
+
+.actions {
+  background: #fff;
+}
+
+.stepline {
+  margin-bottom: 0;
+}
+
+.stepIngredient {
+    display: inline;
+    font: 34px/42px 'CombiNumeralsLtdRegular', Arial, sans-serif;letter-spacing: 0;
+}
+
+.stepnum {
+	vertical-align: middle;
+	margin-top: -12px;
+  position: relative;
+  
+  .handle {
+    cursor: move;
+  }
+
+	h2 {
+		font: 34px/42px 'CombiNumeralsLtdRegular', Arial, sans-serif;letter-spacing: 0;
+	}
+}
+
+.ingredient_amount {
+    font-size: 0.8em;
+    color: black;
+    display: block;
+    text-align: center;
+    margin-top: -8px;
+    white-space: nowrap;
+
+}
+
+.newIngredient {
+    opacity:0.6;
+
+    &:hover {
+        opacity:1;
+    }
+}
+
+a.new {
+  float: right;
+}
+
+.note {
+	margin-bottom: -15px;
+  color: black;
+  input {
+    height: 10px;
+    width: 550px;
+    maxlength: 140;
+  }
+}
+
+body {
+	font: 14px/22px 'FolksRegular', Arial, sans-serif;letter-spacing: 0;
+	padding-top: 40px;
+}
+
+label {
+	font: 18px/26px 'FolksRegular', Arial, sans-serif;letter-spacing: 0;
+}
+
+h1 {
+	font: 52px/58px 'GoodDogRegular', Arial, sans-serif;letter-spacing: 0;
+	margin-bottom: -10px;
+
+  small {
+    font-size: 14px;
+  }
+}
+
+#create_remove_ingredient {
+  width: 100%;
+  text-align: center;
+}
+
+p.centered {
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+}
+
+#recipe_image {
+  width: 100%;
+  padding-bottom: 20px;
+    
+  img {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+  }
+}
+
+.ingredient {
+	
+}
+
+li > .ingredient_image {
+  cursor: move;
+}
+
+h3 {
+  margin-bottom: -7px;
+}
+
+h3.user_title {
+	margin-bottom: -25px;
+}
+
+.prep {
+	font-size: 10px;
+	color: #000;
+
+	.column {
+	width: 50px;
+	}
+}
+
+.odd {
+  background-color: #eee;
+}
+
+.no_pad .row {
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #cccccc;
+  height: 50px;
+}
+
+.last {
+  border-bottom: 1px solid #cccccc;
+}
+
+.tag {
+  font-size: 13px;
+  border: 1px solid #0069d6;
+  color: #0069d6;
+  background-color: #ffffff;
+  align: center;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: 5px;
+}
+
+.block {
+  display: block;
+  margin-bottom: -5px;
+}
+
+.bold {
+	font: 24px/32px 'GoodDogRegular', Arial, sans-serif;letter-spacing: 0;
+}
+
+.ingredient_toolbox {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #eee;
+  width: 100%;
+  height: 300px;
+  margin: 0;
+  border-top: 1px solid black;
+
+  div {
+    padding: 15px;
+  }
+}
+
+#editbar {
+  margin-top: 40px;
+  background-color: #000;
+  height: 25px;
+  width: 100%;
+  z-index: 1;
+  
+  a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  ul.nav > li a {
+    padding-top: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+}
+
+.edit {
+  padding-top: 30px;
+}
+
+#mask {
+  position:absolute;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+  opacity: 0.8;
+  left: 0;
+  top: 0;
+}
+
+.modal {
+  width: 300px;
+  position:absolute;
+  display:none;
+  z-index:9999;
+}
+
+
+.new_recipe .modal {
+  width: 500px;
+  position:absolute;
+  display:none;
+  z-index:9999;
+}
+
+.update_recipe {
+  width: 600px;
+  position:absolute;
+  display:none;
+  z-index:9999;
+}
+
+#associations_amount_unit {
+    width: 70px;
+    vertical-align: middle;
+}
+
+.modal-footer {
+  .btn_left {
+    float: left;
+  }
+}
+
+.modal-body {
+  img {
+      vertical-align: middle;
+      padding-right: 5px;
+  }
+
+  input, select {
+      vertical-align: middle;
+  }
+  select {
+    width: 60px;
+  }
+  div {
+    margin-bottom: 0;
+  }
+}
+
+input.cook_temp {
+  width: 25px;
+}
+
+@font-face {
+    font-family: 'ComfortaaThin';
+    src: url('Comfortaa_Thin-webfont.eot');
+    src: url('Comfortaa_Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Comfortaa_Thin-webfont.woff') format('woff'),
+         url('Comfortaa_Thin-webfont.ttf') format('truetype'),
+         url('Comfortaa_Thin-webfont.svg#ComfortaaThin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ComfortaaRegular';
+    src: url('Comfortaa_Regular-webfont.eot');
+    src: url('Comfortaa_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Comfortaa_Regular-webfont.woff') format('woff'),
+         url('Comfortaa_Regular-webfont.ttf') format('truetype'),
+         url('Comfortaa_Regular-webfont.svg#ComfortaaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ComfortaaBold';
+    src: url('Comfortaa_Bold-webfont.eot');
+    src: url('Comfortaa_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Comfortaa_Bold-webfont.woff') format('woff'),
+         url('Comfortaa_Bold-webfont.ttf') format('truetype'),
+         url('Comfortaa_Bold-webfont.svg#ComfortaaBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'CombiNumeralsLtdRegular';
+    src: url('CombiNumeralsLtd-webfont.eot');
+    src: url('CombiNumeralsLtd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('CombiNumeralsLtd-webfont.woff') format('woff'),
+         url('CombiNumeralsLtd-webfont.ttf') format('truetype'),
+         url('CombiNumeralsLtd-webfont.svg#CombiNumeralsLtdRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'FolksLightRegular';
+    src: url('Folks-Light-webfont.eot');
+    src: url('Folks-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Folks-Light-webfont.woff') format('woff'),
+         url('Folks-Light-webfont.ttf') format('truetype'),
+         url('Folks-Light-webfont.svg#FolksLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'FolksRegular';
+    src: url('Folks-Normal-webfont.eot');
+    src: url('Folks-Normal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Folks-Normal-webfont.woff') format('woff'),
+         url('Folks-Normal-webfont.ttf') format('truetype'),
+         url('Folks-Normal-webfont.svg#FolksRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'FolksBold';
+    src: url('Folks-Bold-webfont.eot');
+    src: url('Folks-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Folks-Bold-webfont.woff') format('woff'),
+         url('Folks-Bold-webfont.ttf') format('truetype'),
+         url('Folks-Bold-webfont.svg#FolksBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'FolksHeavyRegular';
+    src: url('Folks-Heavy-webfont.eot');
+    src: url('Folks-Heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Folks-Heavy-webfont.woff') format('woff'),
+         url('Folks-Heavy-webfont.ttf') format('truetype'),
+         url('Folks-Heavy-webfont.svg#FolksHeavyRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'GoodDogRegular';
+    src: url('GoodDog-webfont.eot');
+    src: url('GoodDog-webfont.eot?#iefix') format('embedded-opentype'),
+         url('GoodDog-webfont.woff') format('woff'),
+         url('GoodDog-webfont.ttf') format('truetype'),
+         url('GoodDog-webfont.svg#GoodDogRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

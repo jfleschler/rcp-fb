@@ -7,13 +7,41 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<ul class="hmenu">
-  <%= render 'shared/navigation' %>
-</ul>
-<%- flash.each do |name, msg| -%>
-  <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-<%- end -%>
-<%= yield %>
+<div class="topbar"> 
+  	<div class="fill"> 
+	    <div class="container"> 
+	    	<h3 class="bold"><%= link_to "rcp", root_path %></h3>
+	    	<ul class="nav">
+	    		<li><%= link_to "recipes", recipes_path %></li>
+	    		<% if signed_in? %>
+	    			<li><%= link_to "my recipes", current_user %></li>
+	    		<% end %>
+	    	</ul>
+	      	<ul class="nav secondary-nav">
+	      		<% if !signed_in? %>
+		      		<li><%= link_to "sign up", signup_path %></li>
+		      		<li><%= link_to "sign in", signin_path %></li>
+	      		<% else %>
+		            <li class="menu"> 
+		              <a href="#" class="menu"><%= current_user.username %></a> 
+		              <ul class="menu-dropdown"> 
+		                <li><a href="#">edit profile</a></li> 
+		                <li><a href="#">settings</a></li> 
+		                <li class="divider"></li> 
+		                <li><%= link_to "sign out", signout_path %></li> 
+		              </ul> 
+		            </li> 
+	            <% end %>
+	        </ul> 
+	  	</div>
+ 	</div>
+</div>
 
+<% flash.each do |key, msg| %>
+    <%= content_tag :div, msg, :class => [key, " message"], :id => "notice_#{key}" %>
+<% end %>
+
+<%= yield %>
+<!--<%= debug(params) if Rails.env.development? %>-->
 </body>
 </html>
