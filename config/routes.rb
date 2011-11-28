@@ -1,7 +1,8 @@
 RcpFb::Application.routes.draw do
   
   resources :users, :only => :show
-
+  resources :recipes
+  
   root :to => 'home#index'
 
   match '/auth/:provider/callback' => 'sessions#create'
