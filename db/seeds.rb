@@ -1,7 +1,4 @@
 
-puts 'EMPTY THE MONGODB DATABASE'
-Mongoid.master.collections.reject { |c| c.name =~ /^system/}.each(&:drop)
-
 ingredients = [
 	{:name => "salted butter",		:image => "ingredients/butter.png",		:tag_name => ""},
 	{:name => "unsalted butter",	:image => "ingredients/butter.png",		:tag_name => ""},
