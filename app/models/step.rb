@@ -3,6 +3,7 @@ class Step
   field :step_num,  :type => Integer
   field :note,  	:type => String
 
+  belongs_to :recipe
   has_many :associations, :dependent => :destroy
   #has_many :ingredients, :through => :associations
 

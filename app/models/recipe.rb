@@ -10,7 +10,8 @@ class Recipe
   field :temp_unit,   :type => String
 
   belongs_to :user
-
+	has_many :steps, :dependent => :destroy
+	
   default_scope order_by([:created_at, :asc])
 	scope :public, lambda { where(:public => true) }
 

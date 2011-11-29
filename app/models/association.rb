@@ -9,7 +9,7 @@ class Association
   before_destroy :renumber_remaining
 
 	scope :ordered, lambda { order_by([:position, :asc]) }
-	#scope :list, lambda { order_by([:ingredient_id, :asc]) }
+	#scope :list, lambda { joins(:ingredient).order_by([:ingredient_id, :asc]) }
 
   def ingredient
   	Ingredient.find(ingredient_id)
