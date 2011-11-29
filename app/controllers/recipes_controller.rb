@@ -7,7 +7,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-  	@recipe = Recipe.find_by_id(params[:id])
+  	@recipe = Recipe.find(params[:id])
     
     if signed_in?
       unless @recipe && (@recipe.public? || current_user.recipes.find_by_id(params[:id]))
@@ -74,7 +74,7 @@ class RecipesController < ApplicationController
   end
 
   def toggle
-    @user = User.find_by_id(params[:user_id])
+    @user = User.find(params[:user_id])
     recipe = Recipe.find(params[:id])
     
     recipe.toggle(:public)
@@ -92,7 +92,7 @@ class RecipesController < ApplicationController
   end
 
   def create_ingredient
-    @user = User.find_by_id(params[:user_id])
+    @user = User.find(params[:user_id])
     @recipe = @user.recipes.find(params[:id])
 
     ingredient = Ingredient.create({:name => @recipe.name, :image => @recipe.image, :tag_name => "multi-recipe", :user_id => @user.id, :recipe_id => @recipe.id})
@@ -107,7 +107,7 @@ class RecipesController < ApplicationController
   end
 
   def remove_ingredient
-    @user = User.find_by_id(params[:user_id])
+    @user = User.find(params[:user_id])
     @recipe = Recipe.find(params[:id])
 
     ingredient = Ingredient.find(@recipe.has_ingredient)
