@@ -2,8 +2,8 @@
 	<div>
 	<span id="recipe_ingredients"><%= render :partial => 'recipe_ingredients' %></span>
 	<h3>ingredients</h3>
-	<% Ingredient.where(:user_id => nil).each do |i| %>
-		<%= image_submit_tag i.image, :title => i.name, :class => "ingredient", :id => i.id, :height => "40", :width => "40", :method => 'get' %>
+	<% Ingredient.each do |i| %>
+		<%= image_submit_tag i.image, :title => i.name, :class => "ingredient", :id => i.id, :method => 'get' %>
 	<% end %>
 	</div>
 </div>
