@@ -19,7 +19,7 @@ ingredients = [
 	{:name => "cake flour",			:image => "ingredients/flour.png",		:tag_name => ""},
 	{:name => "strawberries",		:image => "ingredients/strawberry.png",	:tag_name => ""}
 ].each do |i|
-	ingredient = Ingredient.find_or_create_by_name(i)
+	ingredient = Ingredient.find_or_create_by(i)
 	ingredient.update_attributes(i)
 	ingredient.save
 end
