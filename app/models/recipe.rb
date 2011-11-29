@@ -25,11 +25,11 @@ class Recipe
 		"#{cook_temp.to_s}#{temp_unit.to_s}"
 	end
 
-	def associations
-		associations = []
+	def getAssociations
+		myAssociations = []
 		steps.each do |s|
 			s.associations.each do |a|
-				associations << a
+				myAssociations << a
 			end
 		end
 	end
