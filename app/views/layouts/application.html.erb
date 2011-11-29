@@ -3,8 +3,9 @@
 <head>
   <title>rcp</title>
   <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
   <link rel="stylesheet/less" type="text/css" href="lib/bootstrap.less">
+  <%= javascript_include_tag "application" %>
+
   <%= csrf_meta_tags %>
   <%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? %>
 </head>
