@@ -10,12 +10,12 @@ class RecipesController < ApplicationController
   	@recipe = Recipe.find(params[:id])
     
     if signed_in?
-      unless @recipe && (@recipe.public? || current_user.recipes.find(params[:id]))
+      unless @recipe && (@recipe.isPublic? || current_user.recipes.find(params[:id]))
         flash[:warning] = "sorry, recipe does not exist or is private!"
         redirect_to recipes_path
       end
     else
-      unless @recipe && @recipe.public?
+      unless @recipe && @recipe.isPublic?
         flash[:warning] = "sorry, recipe does not exist or is private!"
         redirect_to recipes_path
       end
