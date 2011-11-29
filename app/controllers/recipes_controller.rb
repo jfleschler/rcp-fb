@@ -77,7 +77,7 @@ class RecipesController < ApplicationController
     @user = User.find(params[:user_id])
     recipe = Recipe.find(params[:id])
     
-    recipe.toggle(:public)
+    recipe.public = recipe.public == false
     recipe.save
 
     if(@user == current_user) 
