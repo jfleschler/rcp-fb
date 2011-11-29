@@ -4,7 +4,7 @@ class Recipe
   
   field :name,   :type => String
   field :image,  :type => String, :default => "recipe_placeholder.png"
-  field :public, :type => Boolean, :default => false
+  field :isPublic, :type => Boolean, :default => false
   field :cook_temp,   :type => String
   field :cook_time,   :type => String
   field :temp_unit,   :type => String
@@ -13,7 +13,7 @@ class Recipe
 	has_many :steps, :dependent => :destroy
 
   default_scope order_by([:created_at, :asc])
-	scope :public, lambda { where(:public => true) }
+	scope :public, lambda { where(:isPublic => true) }
 
 	def step_attributes=(step_attributes)
 	  step_attributes.each do |attributes|
@@ -27,10 +27,11 @@ class Recipe
 
 	def getAssociations
 		myAssociations = []
-		steps.each do |s|
-			s.associations.each do |a|
+		steps.each do |step|
+			step.associations.each do |a|
 				myAssociations << a
 			end
 		end
+		return myAssociations
 	end
 end
