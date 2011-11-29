@@ -2,12 +2,13 @@ class Recipe
   include Mongoid::Document
 	include Mongoid::Timestamps
   
-  field :name,   :type => String
-  field :image,  :type => String, :default => "recipe_placeholder.png"
-  field :isPublic, :type => Boolean, :default => false
+  field :name,  			:type => String
+  field :image,  			:type => String, :default => "recipe_placeholder.png"
+  field :isPublic, 		:type => Boolean, :default => false
   field :cook_temp,   :type => String
   field :cook_time,   :type => String
   field :temp_unit,   :type => String
+	field :makes,		    :type => String
 
   belongs_to :user
 	has_many :steps, :dependent => :destroy
