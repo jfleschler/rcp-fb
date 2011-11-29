@@ -149,6 +149,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   fb_graph
   jquery-rails
+  less-rails-bootstrap
   mongo (~> 1.4.0)
   mongoid (~> 2.3)
   omniauth

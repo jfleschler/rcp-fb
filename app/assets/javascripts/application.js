@@ -6,7 +6,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require less.min.js
 //= require_tree .
 
 $.ajaxSetup({ 
