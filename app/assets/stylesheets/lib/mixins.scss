@@ -150,7 +150,7 @@
 }
 
 // Gradients
-@mixin horizontal-gradient ($startColor: #555, $endColor: #333) {
+@mixin horizontal-gradient ($startColor: #005, $endColor: #003) {
   background-color: $endColor;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, right top, from($startColor), to($endColor)); // Konqueror
