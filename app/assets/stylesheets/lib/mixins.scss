@@ -150,7 +150,7 @@
 }
 
 // Gradients
-@mixin horizontal-gradient ($startColor: #005, $endColor: #003) {
+@mixin horizontal-gradient ($startColor: #555, $endColor: #333) {
   background-color: $endColor;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, right top, from($startColor), to($endColor)); // Konqueror
@@ -163,7 +163,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startColor}', endColorstr='#{$endColor}', GradientType=1); // IE9 and down
 }
 
-@mixin vertical-gradient ($startColor: #555, $endColor: #333) {
+@mixin vertical-gradient ($startColor: #005, $endColor: #003) {
   background-color: $endColor;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, left bottom, from($startColor), to($endColor)); // Konqueror
