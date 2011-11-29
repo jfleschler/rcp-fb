@@ -13,11 +13,7 @@
 			<% step.associations.ordered.each do |association| %>
 			<div class="span1 column padright">
 				<div class="association">
-					<% unless association.ingredient.recipe_id.nil? %>
-						<%= link_to (render association), recipe_path(association.ingredient.recipe_id) %>
-					<% else %>
 						<%= render association %>
-					<% end %>
 				</div>
 			</div>
 			<% end %>
