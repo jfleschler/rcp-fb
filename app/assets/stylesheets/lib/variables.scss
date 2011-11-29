@@ -3,12 +3,12 @@
  * ------------------------------------------------------------------ */
 
 
-// Links  #0069d6
-$linkColor:         #FF0000;
+// Links  
+$linkColor:         #0069d6;
 $linkColorHover:    darken($linkColor, 15);
 
 // Grays
-$black:             #000;
+$black:             #00F;
 $grayDark:          lighten($black, 25%);
 $gray:              lighten($black, 50%);
 $grayLight:         lighten($black, 75%);
