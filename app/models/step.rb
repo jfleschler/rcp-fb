@@ -9,7 +9,7 @@ class Step
 
   before_destroy :renumber_remaining
 
-  scope :ordered, lambda { order(:step_num) }
+  scope :ordered, lambda { order_by([:step_num, :asc]) }
 
 	def number_string
 		case step_num
