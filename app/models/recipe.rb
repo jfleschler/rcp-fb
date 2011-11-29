@@ -1,6 +1,7 @@
 class Recipe
   include Mongoid::Document
-
+	include Mongoid::Timestamps
+  
   field :name,   :type => String
   field :image,  :type => String, :default => "recipe_placeholder.png"
   field :public, :type => Boolean, :default => false
@@ -10,7 +11,7 @@ class Recipe
 
   belongs_to :user
 
-  default_scope order_by([:id, :asc])
+  default_scope order_by([:created_at, :asc])
 	scope :public, lambda { where(:public => true) }
 
 	def step_attributes=(step_attributes)
