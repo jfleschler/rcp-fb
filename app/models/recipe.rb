@@ -11,7 +11,7 @@ class Recipe
 
   belongs_to :user
 	has_many :steps, :dependent => :destroy
-	
+
   default_scope order_by([:created_at, :asc])
 	scope :public, lambda { where(:public => true) }
 
@@ -25,4 +25,12 @@ class Recipe
 		"#{cook_temp.to_s}#{temp_unit.to_s}"
 	end
 
+	def associations
+		associations = []
+		steps.each do |s|
+			s.associations.each do |a|
+				associations << a
+			end
+		end
+	end
 end
