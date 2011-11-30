@@ -5,5 +5,6 @@
  *= require_self
  *= require lib/bootstrap
  *= require custom
+ *= require fb-specific
  *= require jquery.qtip
 */
