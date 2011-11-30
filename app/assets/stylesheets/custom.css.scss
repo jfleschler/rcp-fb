@@ -248,11 +248,18 @@ h3.user_title {
   background-color: #eee;
 }
 
-.no_pad .row {
-  padding: 0;
-  margin: 0;
-  border-top: 1px solid #cccccc;
-  height: 41px;
+.no_pad {
+  .row {
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #cccccc;
+    height: 40px;
+
+    .column, .columns {
+      padding: 0;
+      margin: 0;
+    }
+  }
 }
 
 .last {
