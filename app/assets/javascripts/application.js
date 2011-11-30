@@ -7,6 +7,7 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery.fittext
+//= require qtip/jquery.qtip
 
 
 $.ajaxSetup({ 
