@@ -5,6 +5,8 @@
 		<div class="span1 column center">
 			<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
 				<%= public_private_button recipe %>
+			<% else %>
+				<%= image_tag @user.profile.picture %>
 			<% end %>
 		</div>
 		<div class="span10 columns">
