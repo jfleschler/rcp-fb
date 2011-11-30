@@ -1,7 +1,3 @@
-#facebook_image {
-    vertical-align: sub;
-}
-
 .combine {
   position: absolute;
 	font-size: 1.75em;
@@ -98,7 +94,7 @@ div.notice {
   float: left;
   color: black;
   hr {
-    margin-bottom: 10px;
+    margin-bottom: -3px;
   }
 
   .row {
@@ -129,7 +125,7 @@ div.notice {
 }
 
 .stepline {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .stepIngredient {
@@ -163,9 +159,8 @@ div.notice {
 
 .newIngredient {
     opacity:0.6;
-		padding-top: 10px;
-    
-		&:hover {
+
+    &:hover {
         opacity:1;
     }
 }
@@ -175,7 +170,7 @@ a.new {
 }
 
 .note {
-	margin-bottom: 0px;
+	margin-bottom: -15px;
   color: black;
   input {
     height: 10px;
@@ -225,9 +220,7 @@ p.centered {
 }
 
 .ingredient {
-	width: 40px;
-	height: 40px;
-  border: 0;
+	
 }
 
 li > .ingredient_image {
@@ -240,16 +233,6 @@ h3 {
 
 h3.user_title {
 	margin-bottom: -25px;
-}
-
-#steps_header {
-  margin-bottom: 5px;
-}
-
-.modal-header { 
-  h3 {
-    margin-bottom: -7px;
-  }
 }
 
 .prep {
