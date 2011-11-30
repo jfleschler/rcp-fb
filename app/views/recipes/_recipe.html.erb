@@ -1,6 +1,6 @@
 <h1><%= @recipe.name %></h1>
 <hr />
 <div class="span12 columns">
-	<h3>steps</h3>
+	<h3 id="step_header">steps</h3>
 		<%= render @recipe.steps.ordered %>
 </div>
