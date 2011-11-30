@@ -14,12 +14,7 @@
   margin: 0;
   li {
     list-style: none;
-    padding-bottom: 10px;
   }
-}
-
-#step_header {
-  margin-bottom: -7px;
 }
 
 .step {
@@ -110,6 +105,12 @@ div.notice {
 
 .center {
     vertical-align: middle;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.delete_center {
+    vertical-align: middle;
     margin-top: 10px;
 }
 
@@ -131,7 +132,6 @@ div.notice {
 
 .stepline {
   margin-bottom: 0;
-  padding-bottom: 10px;
 }
 
 .stepIngredient {
@@ -176,7 +176,7 @@ a.new {
 }
 
 .note {
-	margin-bottom: 5px;
+	margin-bottom: -15px;
   color: black;
   input {
     height: 10px;
@@ -196,7 +196,7 @@ label {
 
 h1 {
 	font: 52px/58px 'GoodDogRegular', Arial, sans-serif;letter-spacing: 0;
-	margin-bottom: -30px;
+	margin-bottom: -10px;
 
   small {
     font-size: 14px;
@@ -234,11 +234,11 @@ li > .ingredient_image {
 }
 
 h3 {
-  margin-bottom: -30px;
+  margin-bottom: -7px;
 }
 
 h3.user_title {
-	margin-bottom: -30px;
+	margin-bottom: -25px;
 }
 
 .prep {
@@ -254,11 +254,29 @@ h3.user_title {
   background-color: #eee;
 }
 
-.no_pad .row {
-  padding: 0;
-  margin: 0;
-  border-top: 1px solid #cccccc;
-  height: 50px;
+.no_pad {
+  .row {
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #cccccc;
+    height: 40px;
+
+    .column {
+      padding-left: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.header_pic {
+  float: left;
+  padding: 0px;
+  padding-right: 5px;
+  margin-top: -5px;
+}
+
+.float_left {
+  float: left;
 }
 
 .last {
@@ -291,15 +309,18 @@ h3.user_title {
 }
 
 .ingredient_toolbox {
-
-  width: 300px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #eee;
+  width: 100%;
   height: 300px;
+  margin: 0;
+  border-top: 1px solid black;
 
-}
-
-.addIngredient {
-  width: 350px;
-  height: 300px;
+  div {
+    padding: 15px;
+  }
 }
 
 #editbar {
