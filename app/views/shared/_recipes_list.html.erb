@@ -2,7 +2,6 @@
 <div class="no_pad">
 <% @recipes.each do |recipe| %>
 	<div class="row <%= cycle("odd","even") %> <%= is_last? recipe, @recipes.last %>">
-		
 		<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
 			<div class="span1 column center">
 				<%= public_private_button recipe %>
@@ -12,7 +11,6 @@
 				<%= image_tag recipe.user.profile.picture, :size => "40x40", :class => "float_left" %>
 			</div>
 		<% end %>
-		
 		<div class="span10 columns">
 			<div class="block">
 				<span class="bold">

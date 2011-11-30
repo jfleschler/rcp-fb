@@ -254,6 +254,11 @@ h3.user_title {
     margin: 0;
     border-top: 1px solid #cccccc;
     height: 40px;
+
+    .column {
+      padding-left: 0;
+      margin-left: 0;
+    }
   }
 }
 
