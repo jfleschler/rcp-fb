@@ -1,3 +1,7 @@
+.row {
+  border: 1px;
+}
+
 #facebook_image {
     vertical-align: sub;
 }
@@ -98,7 +102,7 @@ div.notice {
   float: left;
   color: black;
   hr {
-    margin-bottom: -3px;
+    margin-bottom: -10px;
   }
 
   .row {
