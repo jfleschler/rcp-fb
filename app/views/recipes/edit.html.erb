@@ -17,13 +17,13 @@
 			<h1><%= @recipe.name %></h1>
 			<hr />
 			
-			<div class="span12">
+			<div class="span12 columns">
 				<h3 id="steps_header">steps</h3>
 				<div id="allsteps">
 					<%= render :partial => 'step_edit' %>
 				</div>
 				<div class="row">
-					<div class="span1 offset1">
+					<div class="span1 column offset1">
 						<%= new_step_button @recipe.id %>
 					</div>	
 				</div>
