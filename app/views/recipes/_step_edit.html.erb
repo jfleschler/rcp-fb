@@ -3,7 +3,7 @@
 <% @recipe.steps.ordered.each do |step| %>
 <li id="step_<%= step.id %>" class="s">
 	<div class="row">
-		<div class="span1 column center">
+		<div class="span1 column delete_center">
 			<%= delete_step_tag @recipe, step %>
 		</div>
 		<div class="span1 column stepnum">

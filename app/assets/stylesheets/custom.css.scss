@@ -109,6 +109,11 @@ div.notice {
     padding-left: 5px;
 }
 
+.delete_center {
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
 .btn.small {
   padding: {
     left: 5px;
@@ -175,7 +180,7 @@ a.new {
   color: black;
   input {
     height: 10px;
-    width: 500px;
+    width: 550px;
     maxlength: 140;
   }
 }
