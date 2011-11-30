@@ -4,7 +4,7 @@
 	<h3>ingredients</h3>
 	<hr />
 	<% Ingredient.all.each do |i| %>
-		<%= image_submit_tag i.image, :title => i.name, :class => "ingredient", :id => i.id, :size => "40x40", :method => 'get' %>
+		<%= image_submit_tag i.image, :title => i.name, :class => "ingredient", :id => i.id, :height => "40", :width => "40", :method => 'get' %>
 	<% end %>
 	</div>
 </div>
