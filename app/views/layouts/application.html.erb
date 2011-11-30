@@ -23,7 +23,7 @@
 		      		<li><%= fb_login_btn %></li>
 	      		<% else %>
 		            <li class="menu"> 
-		              <a href="#" class="menu"><%= current_user.name %></a> 
+		              <a href="#" class="menu"><%= image_tag recipe.user.profile.picture, :size => "20x20" %> <%= current_user.name %></a> 
 		              <ul class="menu-dropdown"> 
 		                <li><a href="#">edit profile</a></li> 
 		                <li><a href="#">settings</a></li> 
