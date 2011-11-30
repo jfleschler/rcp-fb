@@ -3,21 +3,21 @@
 <% @recipe.steps.ordered.each do |step| %>
 <li id="step_<%= step.id %>" class="s">
 	<div class="row">
-		<div class="span1 column center">
+		<div class="span1 center">
 			<%= delete_step_tag @recipe, step %>
 		</div>
-		<div class="span1 column stepnum">
+		<div class="span1 stepnum">
 			<div class="handle">
 				<h2><%= step.number_string %></h2>
 			</div>
 		</div>
 
-		<div class="span10 columns">
+		<div class="span10">
 			<div class="row">
-				<div class="span9 columns note"><%= text_field :step, "n_#{step.id}", :value => step.note %></div>
+				<div class="span9 note"><%= text_field :step, "n_#{step.id}", :value => step.note %></div>
 			</div>
 			<div class="row">
-				<div class="span9 columns padright">
+				<div class="span9 padright">
 					<ul id="i_step_<%= step.id %>" class="step">
 						<% step.associations.ordered.each do |association| %>
 							<li id="association_<%= association.id %>" class="a">

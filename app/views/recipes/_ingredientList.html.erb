@@ -1,10 +1,10 @@
 <% unless @recipe.cook_time == "" && @recipe.temperature == "" %>
 <div class="recipe_settings">
 	<div class="row">
-		<div class="span1 column">
+		<div class="span1">
 			<%= image_tag 'oven.jpg' %>
 		</div>
-		<div class="span2 columns">
+		<div class="span2">
 			<div class="row">
 				<%= @recipe.temperature %>
 			</div>
