@@ -1,7 +1,4 @@
 class AssociationsController < ApplicationController
-  def show
-  end
-
   def new
   	@recipe = Recipe.find(params[:associations][:recipe])
   	step = Step.find(params[:associations][:activeStep])
