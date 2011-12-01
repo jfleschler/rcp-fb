@@ -6,8 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs 
-//= require jquery.fittext
-//= require qtip/jquery.qtip
+//= require_tree .
 
 
 $.ajaxSetup({ 
