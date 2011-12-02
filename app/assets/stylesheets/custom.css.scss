@@ -355,30 +355,6 @@ h3.user_title {
   padding-top: 30px;
 }
 
-#mask {
-  position:absolute;
-  z-index:9000;
-  background-color:#000;
-  display:none;
-  opacity: 0.8;
-  left: 0;
-  top: 0;
-}
-
-.new_recipe .modal {
-  width: 500px;
-  position:absolute;
-  display:none;
-  z-index:9999;
-}
-
-.update_recipe {
-  width: 600px;
-  position:absolute;
-  display:none;
-  z-index:9999;
-}
-
 #associations_amount_unit {
     width: 70px;
     vertical-align: middle;
