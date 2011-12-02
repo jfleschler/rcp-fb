@@ -8,9 +8,9 @@ class Ingredient
 
   def self.search(search)
 	  if search
-	    find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+	  	find( { name : /#{search}/i } )
 	  else
-	    find(:all)
+	    find({}})
 	  end
 	end
 end
