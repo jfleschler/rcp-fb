@@ -1,5 +1,5 @@
-<%= form_for @recipe do |f| %>
   <div class="update_recipe modal" > 
+  <%= form_for @recipe do |f| %>
     <div class="modal-header"> 
       <h3>edit recipe</h3>
       <a href="#" class="close">&times;</a> 
@@ -42,6 +42,5 @@
     	<%= f.submit "save", :class => "btn primary", :id => "submitRecipe" %>
       <a href="#" class="btn secondary" id="nevermind" >nevermind</a> 
     </div> 
-  </div> 
-<% end %>
-<div id="mask"></div>
+  <% end %>
+</div> 

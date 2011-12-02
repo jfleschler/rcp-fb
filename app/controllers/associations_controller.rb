@@ -3,7 +3,7 @@ class AssociationsController < ApplicationController
   	@recipe = Recipe.find(params[:associations][:recipe])
   	step = Step.find(params[:associations][:activeStep])
   	step.associations.create({:ingredient_id => params[:associations][:selectedIngredient],
-	  						  :amount        => "#{params[:associations][:amount]} #{params[:associations][:amount_unit]}",
+	  						  :amount        => "#{params[:associations][:selectedAmount]}", #{params[:associations][:amount_unit]}",
 	  						  :position      => step.associations.count + 1})
 
     #@recipe.build_tag_list

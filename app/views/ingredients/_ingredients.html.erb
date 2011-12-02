@@ -1,0 +1,18 @@
+<% @ingredients.each do |i| %>
+	<%= image_submit_tag i.image, :value => "#{i.name}", :title => "#{i.name}", :class => "ingredient", :id => i.id, :method => 'get'  %>
+<% end %>
+<script>
+// --- SELECTED NEW INGREDIENT
+    $('input[type="image"].ingredient').click(function(e) {  
+        e.preventDefault();
+        $('#ingredient_toolbox').modal('hide');
+
+        //Store the selected ingerdient
+        $('#associations_selectedIngredient').val($(this).attr('id'));
+        $('#selectedImage').attr('src', $(this).attr('src'));
+
+        $('#ingredient_name').html($(this).val());
+        var id = $(this).attr('id');
+        $('#addIngredient').modal('show');
+    });
+</script>

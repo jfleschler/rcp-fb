@@ -1,10 +1,29 @@
-<div class="ingredient_toolbox">
-	<div>
-	<span id="recipe_ingredients"><%= render :partial => 'recipe_ingredients' %></span>
-	<h3>ingredients</h3>
-	<hr />
-	<% Ingredient.all.each do |i| %>
-		<%= image_submit_tag i.image, :title => i.name, :class => "ingredient", :id => i.id, :method => 'get' %>
-	<% end %>
+<div class="modal hide fade" id="ingredient_toolbox">
+	<div class="modal-header"> 
+    <a href="#" class="close">&times;</a>
+    <div style="display:inline">
+	    <span>search&nbsp;</span>
+	    <input type="text" id="ingredient_search" class="span8"/>
+    </div>
+  </div> 
+  <div class="modal-body"> 
+	<div id="search_results">
+		<% Ingredient.search(params[:ingredient_search]).each do |i| %>
+			<%= image_submit_tag i.image, :value => "#{i.name}", :title => "#{i.name}", :class => "ingredient", :id => i.id, :method => 'get' %>
+		<% end %>
+	</div>
 	</div>
 </div>
+
+<script>
+$("#ingredient_search").keyup(function() {
+	  $.ajax({
+				    type: 'post', 
+				    data: 'search=' + $('#ingredient_search').val(), 
+				    dataType: 'script', 
+				    complete: function(request){
+				        
+				    },
+				    url: '/ingredients/search'});
+});
+</script>

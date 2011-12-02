@@ -1,21 +1,17 @@
 <script>
-	var toolbox = $('div.ingredient_toolbox');
 
-	$('img.newIngredient').click(
-		function() {
+	$('img.newIngredient').click(function() {
 			$('#associations_activeStep').val($(this).attr('id'));
-			toolbox.slideToggle("slow");
-		}
-	);
-
-	$('img.ingredient').qtip({
-		position: {
-	      my: 'top middle', 
-	      at: 'bottom middle'
-	   },
-	   style: { 
-	      tip: true,
-	      classes: 'ui-tooltip-dark ui-tooltip-rounded'
-	   }
+			$('#ingredient_toolbox').modal('show');
 	});
+
+	$('#ingredient_toolbox').bind('shown', function () {
+        $('#ingredient_search').focus();
+        $('#ingredient_search').select();
+  });
+
+	$('.ingredient').twipsy({
+		live: true
+	});
+	
 </script>

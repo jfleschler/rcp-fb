@@ -22,7 +22,8 @@ RcpFb::Application.routes.draw do
   match 'recipes/:id/create_ingredient' => 'recipes#create_ingredient'
   match 'recipes/:id/remove_ingredient' => 'recipes#remove_ingredient'
   match 'steps/:id/save_note' => 'steps#save_note'
-
+  match 'ingredients/search' => 'ingredients#search'
+  
   match '/auth/:provider/callback' 	=> 'sessions#create'
   match '/auth/failure' 			=> 'sessions#failure'
 
