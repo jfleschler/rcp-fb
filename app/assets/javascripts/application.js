@@ -70,6 +70,11 @@ $(document).ready(function(){
         $('#ingredient_search').select();
     });
 
+    $('#newRecipe').bind('shown', function () {
+        $('#recipe_name').focus();
+        $('#recipe_name').select();
+    });
+    
     // --- SELECTED NEW INGREDIENT
     $('input[type="image"].ingredient').click(function(e) {  
         e.preventDefault();
