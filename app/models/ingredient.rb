@@ -8,9 +8,9 @@ class Ingredient
 
   def self.search(search)
 	  if search
-	  	find( { name : /#{search}/i } )
+	  	Ingredient.find( { name : /#{search}/i } )
 	  else
-	    find({}})
+	    Ingredient.find({}})
 	  end
 	end
 end
