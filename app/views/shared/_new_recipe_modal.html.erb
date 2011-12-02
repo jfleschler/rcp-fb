@@ -1,17 +1,17 @@
-<%= form_for Recipe.new do |f| %>
-  <div class="new_recipe modal" > 
+<div class="modal hide fade" id="newRecipe" > 
+  <%= form_for Recipe.new do |f| %>
     <div class="modal-header"> 
-      <h3>new recipe</h3>
       <a href="#" class="close">&times;</a> 
+      <h3 id="step_header">new recipe</h3>
     </div> 
+
     <div class="modal-body"> 
       <%= f.label :name, "name" %>&nbsp;&nbsp;
       <%= f.text_field :name, :class => "xlarge" %>
     </div>
     <div class="modal-footer"> 
-    	<%= f.submit "create", :class => "btn primary", :id => "submitRecipe" %>
+      <%= f.submit "create", :class => "btn primary", :id => "submitRecipe" %>
       <a href="#" class="btn secondary" id="nevermind2" >nevermind</a> 
     </div> 
-  </div> 
-<% end %>
-<div id="mask"></div>
+  <% end %>
+</div> 
