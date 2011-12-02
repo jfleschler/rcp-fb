@@ -8,7 +8,7 @@ class Ingredient
 
   def self.search(search)
 	  if search
-	  	Ingredient.find(:all, :conditions => {:name => /#{search}/i})
+	  	Ingredient.find(:all, :conditions => {:name => /search/i})
 	  else
 	    Ingredient.find(:all)
 	  end
