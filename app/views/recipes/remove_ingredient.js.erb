@@ -1,2 +1,8 @@
 $('#create_remove_ingredient').html("<%= escape_javascript(create_remove_ingredient_button @recipe) %>");
-$('#toolbox_modal').html("<%= escape_javascript(render :partial => 'recipes/toolbox') %>")
+$.ajax({
+		    type: 'post', 
+		    data: 'search=', 
+		    dataType: 'script', 
+		    complete: function(request){ },
+		    url: '/ingredients/search'
+		  });
