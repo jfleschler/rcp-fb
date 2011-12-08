@@ -17,13 +17,13 @@ module RecipesHelper
 		end
 	end
 
-#	def create_remove_ingredient_button(recipe)
-#		if recipe.has_ingredient == nil
-#			link_to "create ingredient", url_for(:controller => 'recipes', :action => 'create_ingredient', :user_id => current_user, :id => recipe), :method => 'put', :remote => true, :class => "btn info" 
-#		else 
-#			link_to "remove ingredient", url_for(:controller => 'recipes', :action => 'remove_ingredient', :user_id => current_user, :id => recipe), :method => 'put', :remote => true, :class => "btn danger" 
-#		end
-#	end
+	def create_remove_ingredient_button(recipe)
+		if recipe.has_ingredient == nil
+			link_to "create ingredient", url_for(:controller => 'recipes', :action => 'create_ingredient', :user_id => current_user, :id => recipe), :method => 'put', :remote => true, :class => "btn info" 
+		else 
+			link_to "remove ingredient", url_for(:controller => 'recipes', :action => 'remove_ingredient', :user_id => current_user, :id => recipe), :method => 'put', :remote => true, :class => "btn danger" 
+		end
+	end
 
 	def is_last?(recipe, last)
 		if recipe == last
