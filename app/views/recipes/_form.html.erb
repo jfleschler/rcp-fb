@@ -7,5 +7,5 @@
      <%= f.hidden_field :selectedAmount %>
      
      <%= render :partial => 'recipes/modal', :locals => {:f => f} %>
-     <%= render :partial => 'recipes/toolbox' %>
+     <div id="toolbox_modal"><%= render :partial => 'recipes/toolbox' %></div>
 <% end %>
