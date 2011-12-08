@@ -1,6 +1,6 @@
 $('#create_remove_ingredient').html("<%= escape_javascript(create_remove_ingredient_button @recipe) %>");
 $('#allsteps').html("<%= escape_javascript(render('recipes/step_edit')) %>");
-
+$('.sidebar').html("<%= escape_javascript(render('recipes/ingredientList')) %>");
 $.ajax({
 		    type: 'post', 
 		    data: 'search=', 
