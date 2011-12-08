@@ -1,5 +1,8 @@
 <h3>recipes</h3>
 <hr />
+	<% Ingredient.where(:user_id => current_user.id).where("ingredients.user_id IS NOT NULL").each do |i| %>
+		<%= image_submit_tag i.image, :title => i.name, :class => "ingredient", :id => i.id, :method => 'get' %>
+	<% end %>
 
 <script>
 	$('input[type="image"].ingredient').qtip({

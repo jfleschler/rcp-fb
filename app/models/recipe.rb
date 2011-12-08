@@ -2,13 +2,14 @@ class Recipe
   include Mongoid::Document
 	include Mongoid::Timestamps
   
-  field :name,  			:type => String
-  field :image,  			:type => String, :default => "recipe_placeholder.png"
-  field :isPublic, 		:type => Boolean, :default => false
-  field :cook_temp,   :type => String
-  field :cook_time,   :type => String
-  field :temp_unit,   :type => String
-	field :makes,		    :type => String
+  field :name,  					:type => String
+  field :image,  					:type => String, :default => "recipe_placeholder.png"
+  field :isPublic, 				:type => Boolean, :default => false
+  field :cook_temp,   		:type => String
+  field :cook_time,   		:type => String
+  field :temp_unit,  			:type => String
+	field :makes,		    		:type => String
+	field :has_ingredient,	:type => String
 
   belongs_to :user
 	has_many :steps, :dependent => :destroy
@@ -34,5 +35,22 @@ class Recipe
 			end
 		end
 		return myAssociations
+	end
+
+	def remove_ingredient
+		unless has_ingredient == nil
+			i = Ingredient.find(has_ingredient)
+			i.destroy
+		end
+	end
+
+	def recipes_as_ingredients
+		r_as_i = []
+		getAssociations.each do |a|
+			unless a.ingredient.recipe_id.nil?
+				r_as_i << Recipe.find_by_id(a.ingredient.recipe_id)
+			end
+		end
+		return r_as_i
 	end
 end

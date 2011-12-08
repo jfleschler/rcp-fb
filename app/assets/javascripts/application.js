@@ -83,6 +83,7 @@ $(document).ready(function(){
         //Store the selected ingerdient
         $('#associations_selectedIngredient').val($(this).attr('id'));
         $('#selectedImage').attr('src', $(this).attr('src'));
+        $('#selectedImage').attr('title', $(this).val());
 
         $('#ingredient_name').html($(this).val());
         var id = $(this).attr('id');

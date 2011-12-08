@@ -95,9 +95,9 @@ class RecipesController < ApplicationController
     @user = User.find(params[:user_id])
     @recipe = @user.recipes.find(params[:id])
 
-    ingredient = Ingredient.create({:name => @recipe.name, :image => @recipe.image, :tag_name => "multi-recipe", :user_id => @user.id, :recipe_id => @recipe.id})
+    ingredient = Ingredient.create({:name => @recipe.name, :image => @recipe.image, :user_id => @user.id, :recipe_id => @recipe.id})
     ingredient.reload
-    #@recipe.has_ingredient = ingredient.id
+    @recipe.has_ingredient = ingredient.id
     #@recipe.build_tag_list
     @recipe.save
 
@@ -112,7 +112,7 @@ class RecipesController < ApplicationController
 
     ingredient = Ingredient.find(@recipe.has_ingredient)
     ingredient.destroy
-    #@recipe.has_ingredient = nil
+    @recipe.has_ingredient = nil
     #@recipe.build_tag_list
     @recipe.save
 
