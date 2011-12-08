@@ -9,7 +9,7 @@ class Ingredient
   has_many :associations, :dependent => :destroy
 	
 	scope :non_user, lambda { where("recipe_id is null").order(:ingredient_id) }
-
+	
   def self.search(search)
 	  if search
 	  	Ingredient.all(conditions: { name: /#{search}/i })
