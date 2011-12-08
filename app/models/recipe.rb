@@ -48,7 +48,7 @@ class Recipe
 		r_as_i = []
 		getAssociations.each do |a|
 			unless a.ingredient.recipe_id.nil?
-				r_as_i << Recipe.find_by_id(a.ingredient.recipe_id)
+				r_as_i << Recipe.find(a.ingredient.recipe_id)
 			end
 		end
 		return r_as_i
