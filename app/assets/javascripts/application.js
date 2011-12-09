@@ -91,7 +91,7 @@ $(document).ready(function(){
     });
     
     // --- ADD INGREDIENT TO STEP
-    $('#submitIngredient').unbind('click').click(function() {
+    $('#submitIngredient').unbind('click').bind('click', function() {
         $(modals).modal('hide');
         $('#associations_selectedAmount').val($('#associations_amount').val() + ' ' + $('#associations_amount_unit').val());
         $('#associations_help').parent($('form')).submit(); 
