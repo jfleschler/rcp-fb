@@ -14,6 +14,8 @@ class Recipe
   belongs_to :user
 	has_many :steps, :dependent => :destroy
 
+	mount_uploader :image, ImageUploader
+
   default_scope order_by([:created_at, :asc])
 	scope :public, lambda { where(:isPublic => true) }
 

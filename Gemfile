@@ -14,6 +14,8 @@ gem 'will_paginate', '3.0.pre2'
 
 gem 'jquery-rails', '1.0.18'
 
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
