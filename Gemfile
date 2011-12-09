@@ -26,6 +26,7 @@ group :assets do
 end
 
 group :production do
+	gem 'rack-gridfs'
   gem 'rmagick'
 	gem 'thin'
 end
