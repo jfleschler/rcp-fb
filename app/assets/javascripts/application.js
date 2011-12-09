@@ -46,11 +46,11 @@ $(document).ready(function(){
 
 
 
-    $("body").bind("click", function (e) {
+    $("body").unbind('click').bind("click", function (e) {
         $('a.menu').parent("li").removeClass("open");
     });
 
-    $("a.menu").click(function (e) {
+    $("a.menu").unbind('click').click(function (e) {
         var $li = $(this).parent("li").toggleClass('open');
         return false;
     });
@@ -76,7 +76,7 @@ $(document).ready(function(){
     });
     
     // --- SELECTED NEW INGREDIENT
-    $('input[type="image"].ingredient').click(function(e) {  
+    $('input[type="image"].ingredient').unbind('click').click(function(e) {  
         e.preventDefault();
         $('#ingredient_toolbox').modal('hide');
 
@@ -91,14 +91,14 @@ $(document).ready(function(){
     });
     
     // --- ADD INGREDIENT TO STEP
-    $('#submitIngredient').click(function() {
+    $('#submitIngredient').unbind('click').click(function() {
         $(modals).modal('hide');
         $('#associations_selectedAmount').val($('#associations_amount').val() + ' ' + $('#associations_amount_unit').val());
         $('#associations_help').parent($('form')).submit(); 
     });
 
     // --- NEW RECIPE MODAL OPEN
-    $('a.new').click(function(e) {
+    $('a.new').unbind('click').click(function(e) {
         //Cancel the link behavior
         e.preventDefault();
 
@@ -106,7 +106,7 @@ $(document).ready(function(){
     });
     
     // --- NEW RECIPE SUBMIT
-    $('#submitRecipe').click(function() {
+    $('#submitRecipe').unbind('click').click(function() {
         $(modals).modal('hide');
         //$('#selectedRecipe_name').val($('#recipe_name').val());
         //$('#recipe_help').parent($('form')).submit(); 
@@ -114,7 +114,7 @@ $(document).ready(function(){
 
 
     // --- UPDATE RECIPE MODAL OPEN
-    $('a.update').click(function(e) {
+    $('a.update').unbind('click').click(function(e) {
         //Cancel the link behavior
         e.preventDefault();
 
@@ -123,11 +123,11 @@ $(document).ready(function(){
 
 
     // --- if ok is clicked
-    $('#delete').click(function () {
+    $('#delete').unbind('click').click(function () {
 	    $(modals).modal('hide');
     });
 
-    $('#nevermind, #nevermind2').click(function () {
+    $('#nevermind, #nevermind2').unbind('click').click(function () {
 	    $(modals).modal('hide');
     });
 });

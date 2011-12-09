@@ -1,6 +1,6 @@
 <script>
 
-	$('img.newIngredient').click(function() {
+	$('img.newIngredient').unbind('click').click(function() {
 			$('#associations_activeStep').val($(this).attr('id'));
 			$('#ingredient_toolbox').modal('show');
 	});
