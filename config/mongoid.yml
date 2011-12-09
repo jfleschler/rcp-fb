@@ -1,3 +1,10 @@
+development:
+  host: localhost
+  database: rcp_fb_development
+
+test:
+  host: localhost
+  database: rcp_fb_test
 
 # set these environment variables on your prod server
 production:
