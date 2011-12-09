@@ -121,18 +121,14 @@ $(document).ready(function(){
         $('#update_recipe').modal('show');
     });     
 
-
-    // --- if ok is clicked
-    $('#delete').unbind('click').click(function () {
-	    $(modals).modal('hide');
-    });
-
+    // --- NEVERMIND RETURN TO TOOLBOX
     $('#nevermind').unbind('click').click(function () {
         $(modals).modal('hide');
         $('#ingredient_toolbox').modal('show');
     });
 
-    $('#nevermind2').unbind('click').click(function () {
+    // --- NEVERMIND CLOSE MODAL
+    $('#nevermind2, #delete').unbind('click').click(function () {
 	    $(modals).modal('hide');
     });
 });
