@@ -127,7 +127,12 @@ $(document).ready(function(){
 	    $(modals).modal('hide');
     });
 
-    $('#nevermind, #nevermind2').unbind('click').click(function () {
+    $('#nevermind').unbind('click').click(function () {
+        $(modals).modal('hide');
+        $('#ingredient_toolbox').modal('show');
+    });
+
+    $('#nevermind2').unbind('click').click(function () {
 	    $(modals).modal('hide');
     });
 });
