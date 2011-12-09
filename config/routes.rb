@@ -30,5 +30,7 @@ RcpFb::Application.routes.draw do
   match '/signout' => 'sessions#destroy', :as => :signout
   match '/signin'  => 'sessions#new', :as => :signin
 
+  match "/images/uploads/*path" => "gridfs#serve"
+  
   root :to => 'home#index'
 end
