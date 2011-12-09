@@ -7,6 +7,8 @@
     <div class="modal-body"> 
       <div id="recipe_image">
         <%= image_tag @recipe.image, :size => "40x40", :title => @recipe.name, :class => "ingredient" %>
+        <%= image_tag @recipe.image_url(:thumb) if @recipe.image? %>
+        <%= file_field_tag :image %>
       </div>
       <div class="clearfix">
         <%= label_tag :name, "name" %>

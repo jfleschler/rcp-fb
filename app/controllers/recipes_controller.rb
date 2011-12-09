@@ -37,7 +37,7 @@ class RecipesController < ApplicationController
     @recipe.cook_temp = params[:cook_temp] 
     @recipe.temp_unit = params[:temp_unit]
     @recipe.makes = params[:makes]
-    
+    @recipe.image = params[:image] unless params[:image] == ""
     if @recipe.save
       @recipe.reload
       #flash[:notice] = "recipe saved!"
