@@ -14,7 +14,7 @@ class ServeGridfsImage
   private  
   def process_request(env, key)
     begin
-      Mongo::GridFileSystem.new(Mongoid.database).open(key, 'r') do |file|
+      Mongo::GridFileSystem.new(ENV['MONGOLAB_URI']).open(key, 'r') do |file|
         [200, { 'Content-Type' => file.content_type }, [file.read]]
       end
     rescue
