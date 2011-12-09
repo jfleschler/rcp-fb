@@ -1,5 +1,5 @@
 <div class="modal hide fade" id="update_recipe"> 
-  <%= form_for @recipe do |f| %>
+  <%= form_for @recipe, :html => {:multipart => true} do |f| %>
     <div class="modal-header"> 
       <h3>edit recipe</h3>
       <a href="#" class="close">&times;</a> 
