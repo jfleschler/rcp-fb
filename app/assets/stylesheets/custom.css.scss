@@ -214,12 +214,12 @@ a.new {
 }
 
 body {
-	font: 14px/22px 'FolksRegular', Arial, sans-serif;letter-spacing: 0;
+	font: 12px/22px 'PerspectiveSansRegular', Arial, sans-serif;letter-spacing: 0;
 	padding-top: 40px;
 }
 
 label {
-	font: 18px/26px 'FolksRegular', Arial, sans-serif;letter-spacing: 0;
+	font: 18px/26px 'PerspectiveSansRegular', Arial, sans-serif;letter-spacing: 0;
 }
 
 h1 {
@@ -495,4 +495,17 @@ input.cook_temp {
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'PerspectiveSansRegular';
+    src: url('persans-webfont.eot');
+    src: url('persans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('persans-webfont.woff') format('woff'),
+         url('persans-webfont.ttf') format('truetype'),
+         url('persans-webfont.svg#PerspectiveSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 
