@@ -1,11 +1,10 @@
 <div class="modal hide fade" id="update_recipe"> 
-  
+  <%= form_for @recipe, :html => {:multipart => true} do |f| %>
     <div class="modal-header"> 
       <a href="#" class="close">&times;</a> 
-      <h3>edit recipe</h3>
+      <h3 id="step_header">edit recipe</h3>
     </div> 
     <div class="modal-body"> 
-    <%= form_for @recipe, :html => {:multipart => true} do |f| %>
       <div id="recipe_image">
         <%= image_tag @recipe.image_url(:thumb), :title => @recipe.name, :class => "ingredient" if @recipe.image? %>
       </div>

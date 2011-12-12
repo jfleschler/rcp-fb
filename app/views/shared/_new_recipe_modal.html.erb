@@ -1,17 +1,46 @@
 <div class="modal hide fade" id="newRecipe" > 
-  <%= form_for Recipe.new do |f| %>
+  <%= form_for Recipe.new, :html => {:multipart => true} do |f| %>
     <div class="modal-header"> 
       <a href="#" class="close">&times;</a> 
       <h3 id="step_header">new recipe</h3>
     </div> 
-
     <div class="modal-body"> 
-      <%= f.label :name, "name" %>&nbsp;&nbsp;
-      <%= f.text_field :name, :class => "xlarge" %>
+      <div class="clearfix">
+        <%= label_tag :name, "name" %>
+        <div class="input">
+        <%= text_field_tag :name, @recipe.name, :class => "xlarge" %>
+        </div>
+      </div>
+      <div class="clearfix">
+        <%= label_tag :cook_temp, "cook temp" %>
+        <div class="input">
+        <%= text_field_tag :cook_temp, @recipe.cook_temp, :class => "cook_temp" %>
+        <%= select_tag :temp_unit, options_for_select(["","\u00B0 F","\u00B0 C","\u00B0 K"], @recipe.temp_unit) %>
+        </div>
+      </div>
+      <div class="clearfix">
+        <%= label_tag :cook_time, "cook time" %>
+        <div class="input">
+        <%= text_field_tag :cook_time, @recipe.cook_time, :class => "xlarge" %>
+        </div>
+      </div>
+      <div class="clearfix">
+        <%= label_tag :makes, "makes" %>
+        <div class="input">
+        <%= text_field_tag :makes, @recipe.makes, :class => "xlarge" %>
+        </div>
+      </div>
+      <div class="clearfix">
+        <%= label_tag :image, "image" %>
+        <div class="input">
+        <%= file_field_tag :image %>
+        </div>
+      </div>
+        
     </div>
     <div class="modal-footer"> 
       <%= f.submit "create", :class => "btn primary", :id => "submitRecipe" %>
-      <a href="#" class="btn secondary" id="nevermind2" >nevermind</a> 
+      <a href="#" class="btn secondary" id="nevermind" >nevermind</a> 
     </div> 
   <% end %>
 </div> 
