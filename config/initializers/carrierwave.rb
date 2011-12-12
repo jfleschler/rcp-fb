@@ -4,7 +4,7 @@ CarrierWave.configure do |config|
 
   #config.grid_fs_access_url = "/tmp"
 
-  config.grid_fs_connection = ENV['MONGOLAB_URI']
+  config.grid_fs_connection = Mongoid.database
   config.storage = :grid_fs
   config.root = File.join( Rails.root, "tmp" )
 end

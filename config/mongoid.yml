@@ -1,14 +1,25 @@
 development:
-  host: localhost
-  database: rcp_fb_development
+  host: dbh85.mongolab.com
+  port: 27857
+  username: carrierwave
+  password: fr0gg1es
+  database: heroku_app1843989
 
 test:
-  host: localhost
-  database: rcp_fb_test
+  host: dbh85.mongolab.com
+  port: 27857
+  username: carrierwave
+  password: fr0gg1es
+  database: heroku_app1843989
 
 # set these environment variables on your prod server
 production:
-  uri: <%= ENV['MONGOLAB_URI'] %>
+  host: dbh85.mongolab.com
+  port: 27857
+  username: carrierwave
+  password: fr0gg1es
+  database: heroku_app1843989
+  #uri: <%= ENV['MONGOLAB_URI'] %>
   # slaves:
   #   - host: slave1.local
   #     port: 27018
