@@ -30,8 +30,5 @@ RcpFb::Application.routes.draw do
   match '/signout' => 'sessions#destroy', :as => :signout
   match '/signin'  => 'sessions#new', :as => :signin
 
-  #match "/images/uploads/*path" => "gridfs#serve"
-  
-  #mount Rack::GridFS::Endpoint.new(:db => ENV['MONGOLAB_URI']), :at => "gridfs"
   root :to => 'home#index'
 end

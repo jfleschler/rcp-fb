@@ -4,7 +4,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   storage :grid_fs
 
 	version :thumb do
-    process :resize_to_limit => [200, 200]
+    process :resize_to_limit => [50, 50]
   end
 
   def store_dir
