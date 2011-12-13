@@ -23,23 +23,25 @@
 <% end %>
 </div>
 
-<% @recipes.each do |recipe| %>
 <div>
-	<div class="span6">
+<% @recipes.each do |recipe| %>
+	<div class="row">
 		<div class="span1">
 			<%= image_tag recipe.image_url(:preview) %>
 		</div>
-		<div class="row">
-			<div class="span5">
-				<%= link_to recipe.name, recipe %>
+		<div class="span5">
+			<div class="row">
+				<div class="span5">
+					<%= link_to recipe.name, recipe %>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="span5">
-				<%= image_tag recipe.user.profile.picture, :size => "40x40", :class => "float_left" %>
-				<%= link_to recipe.user.name, recipe.user %>
+			<div class="row">
+				<div class="span5">
+					<%= image_tag recipe.user.profile.picture, :size => "40x40", :class => "float_left" %>
+					<%= link_to recipe.user.name, recipe.user %>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 <% end %>
+</div>
