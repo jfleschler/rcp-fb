@@ -4,7 +4,11 @@
 	<div class="span8">
 		<div class="row border">
 		<div class="span2">
-			<%= image_tag recipe.image_url(:preview), :class => "preview_image" %>
+			<% unless recipe.image_url(:preview).nil? %>
+				<%= image_tag recipe.image_url(:preview), :class => "preview_image" %>
+			<% else %>
+				<%= image_tag 'recipe_placeholder.png', :class => "preview_image" %>
+			<% end %>
 		</div>
 		
 		<div class="span5">
