@@ -2,7 +2,7 @@
 
 <% @recipes.each do |recipe| %>
 	<div class="row">
-		<div class="span3">
+		<div class="span2">
 			<%= image_tag recipe.image_url(:preview) %>
 		</div>
 		
@@ -13,9 +13,13 @@
 				</div>
 			</div>
 			<div class="row">
-				<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
-					<%= public_private_button recipe %>
-				<% end %>
+				<div class="span5">
+					<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
+						<%= public_private_button recipe %>
+					<% else %>
+						&nbsp;
+					<% end %>
+				</div>
 			</div>
 			<div class="row">
 				<div class="span5 bottom">

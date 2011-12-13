@@ -10,7 +10,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   version :preview do
-    process :resize_to_fill => [160, 160]
+    process :resize_to_fill => [100, 100]
   end
 
   def store_dir
