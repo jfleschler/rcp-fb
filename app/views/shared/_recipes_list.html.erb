@@ -3,23 +3,8 @@
 <% @recipes.each do |recipe| %>
 	<div class="row">
 		<div class="span2">
-			<!--<%= image_tag recipe.image_url(:preview) %>-->
+			<%= image_tag recipe.image_url(:preview) %>
 		</div>
-		<div class="span5">
-			<div class="row">
-				<div class="span5">
-					<span class="bold"><%= link_to recipe.name, recipe %></span>
-					<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
-						<%= public_private_button recipe %>
-					<% end %>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span5 bottom">
-					<%= image_tag recipe.user.profile.picture, :size => "40x40", :class => "float_left" %>
-					<%= link_to recipe.user.name, recipe.user %>
-				</div>
-			</div>
-		</div>
+		
 	</div>
 <% end %>
