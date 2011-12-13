@@ -1,5 +1,6 @@
 class ImageUploader < CarrierWave::Uploader::Base
 	include CarrierWave::RMagick
+  include Dmathieu::CarrierWave::Round
 
   storage :grid_fs
 
@@ -11,6 +12,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   version :preview do
     process :resize_to_fill => [100, 100]
+    process :rounded_corner
   end
 
   def store_dir
