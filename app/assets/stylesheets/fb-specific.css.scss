@@ -16,10 +16,11 @@
 .caption-top, .caption-bottom {
 	color: #ffffff;	
 	padding: 1.2em;	
-	font-weight: bold;
-	font-size: 13px;	
-	font-family: arial;	
-	cursor: default;
+	//font-weight: bold;
+	//font-size: 13px;	
+	//font-family: arial;	
+	//cursor: default;
+	font: 18px/32px 'GoodDogRegular', Arial, sans-serif;letter-spacing: 0;
 	background: #000;
 	text-shadow: 1px 1px 0 #202020;
 }
