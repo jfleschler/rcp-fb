@@ -1,7 +1,7 @@
 <%= will_paginate @recipes %>
 
 <% @recipes.each do |recipe| %>
-<span>
+<%= cycle("<div class='row'>","") %>
 	<div class="span8">
 		<div class="row border">
 		<div class="span2">
@@ -36,5 +36,5 @@
 		</div>
 		</div>
 	</div>
-</span>
+	<%= cycle("</div>","") %>
 <% end %>
