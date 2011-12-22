@@ -38,4 +38,4 @@
 	</div>
 	<%= cycle("",raw("</div>")) %>
 <% end %>
-<%= current_cycle %>
+<%= raw("</div>") if current_cycle == "" %>
