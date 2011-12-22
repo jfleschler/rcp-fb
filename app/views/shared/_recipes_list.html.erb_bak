@@ -1,0 +1,41 @@
+<%= will_paginate @recipes %>
+
+<% @recipes.each do |recipe| %>
+<%= cycle(raw("<div class='row'>"),"") %>
+	<div class="span8">
+		<div class="row border">
+		<div class="span2">
+			<% unless recipe.image_url(:preview).nil? %>
+				<%= image_tag recipe.image_url(:preview), :class => "preview_image" %>
+			<% else %>
+				<%= image_tag 'recipe_placeholder.png', :class => "preview_image" %>
+			<% end %>
+		</div>
+		
+		<div class="span5 bottom">
+			<div class="row">
+				<div class="span5">
+					<span class="bold"><%= link_to recipe.name, recipe %></span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span5">
+					<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
+						<%= public_private_button recipe %>
+					<% else %>
+						&nbsp;
+					<% end %>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span5">
+					<%= image_tag recipe.user.profile.picture, :size => "40x40", :class => "float_left" %>
+					<%= link_to recipe.user.name, recipe.user %>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<%= raw("</div>") if current_cycle == "" %>
+	<%= raw("</div>") if current_cycle != "" && @recipes.last == recipe %>
+<% end %>
