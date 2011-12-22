@@ -1,6 +1,7 @@
 <%= will_paginate @recipes %>
 
 <% @recipes.each do |recipe| %>
+<span>
 	<div class="span8">
 		<div class="row border">
 		<div class="span2">
@@ -35,4 +36,5 @@
 		</div>
 		</div>
 	</div>
+</span>
 <% end %>
