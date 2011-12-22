@@ -13,36 +13,30 @@
 
 /* caption styling */
 
-.caption {
-	color: #ffffff;
-
-	padding: 0.6em;
-	font: 11px/20px 'GoodDogRegular', Arial, sans-serif;letter-spacing: 0;
-
-	display: none;
+.caption-top, .caption-bottom {
+	color: #ffffff;	
+	padding: 1.2em;	
+	font-weight: bold;
+	font-size: 13px;	
+	font-family: arial;	
 	cursor: default;
-
-	/* background / transparency */
-	background: #000000;
-	opacity: 0.7;
-	filter: alpha(opacity=70);
-	-moz-opacity: 0.7;
-	-khtml-opacity: 0.7;
+	background: #000;
+	text-shadow: 1px 1px 0 #202020;
 }
-
-.caption a {
+.caption-top {
+}
+.caption-bottom {
+}
+.caption a, .caption a {
 	border: 0 none;
 	text-decoration: none;
 	background: #000000;
 	padding: 0.3em;
 }
-
-.caption a:hover {
+.caption a:hover, .caption a:hover {
 	background: #202020;
 }
-
 .caption-wrapper {
 	float: left;
 }
-
 br.c { clear: both; }
