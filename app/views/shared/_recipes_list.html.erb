@@ -1,6 +1,6 @@
 <%= will_paginate @recipes %>
 
-<div>
+<div class="images">
 <% @recipes.each do |recipe| %>
 
 			<% unless recipe.image_url(:preview).nil? %>
