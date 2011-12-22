@@ -47,8 +47,7 @@ $(document).ready(function(){
 
     $('img.captify').captify({
         speedOut: 'fast',
-        hideDelay: 0,                
-        position: 'top'
+        hideDelay: 0
     });
 
     $("body").unbind('click').bind("click", function (e) {
