@@ -45,7 +45,14 @@ $(document).ready(function(){
     flashbar.slideToggle("slow").delay(2000).slideToggle("slow");
     // ------------------------------------------------------------------------------------------------------
 
-    $('img.captify').captify({});
+    $('img.captify').captify({
+        speedOver: 'fast',
+        speedOut: 'fast',
+        hideDelay: 500, 
+        animation: 'slide',      
+        opacity: '0.7',                   
+        position: 'top'
+    });
 
     $("body").unbind('click').bind("click", function (e) {
         $('a.menu').parent("li").removeClass("open");

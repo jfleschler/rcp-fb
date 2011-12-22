@@ -1,13 +1,13 @@
 <%= will_paginate @recipes %>
 
-<ul style="display:inline">
+<div>
 <% @recipes.each do |recipe| %>
-	<li>
+
 			<% unless recipe.image_url(:preview).nil? %>
 				<%= link_to (image_tag recipe.image_url(:preview), :class => "captify", :title => recipe.name), recipe %>
 			<% else %>
 				<%= link_to (image_tag 'recipe_placeholder.png', :class => "captify", :title => recipe.name), recipe %>
 			<% end %>
-	</li>
+
 <% end %>
-</ul>
+</div>
