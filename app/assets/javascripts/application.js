@@ -47,6 +47,7 @@ $(document).ready(function(){
 
     $('img.captify').captify({
         speedOut: 'fast',
+        className: 'caption-bottom',
         hideDelay: 0
     });
 

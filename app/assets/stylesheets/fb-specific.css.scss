@@ -15,11 +15,11 @@
 
 .caption-top, .caption-bottom {
 	color: #ffffff;	
-	padding: 5px;	
+	padding: 1.2em;	
 	font-weight: bold;
 	font-size: 13px;	
 	font-family: arial;	
-	//cursor: default;
+	cursor: default;
 	background: #000;
 	text-shadow: 1px 1px 0 #202020;
 }
@@ -41,9 +41,9 @@
 }
 br.c { clear: both; }
 
+
 .images img {
 	margin-bottom: 20px;
-	border:1px solid #121213;
 }
 .images img.margin {
 	margin-right: 20px; 
