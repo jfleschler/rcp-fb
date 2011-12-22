@@ -12,7 +12,7 @@
 			<% end %>
 		</div>
 		
-		<div class="span5">
+		<div class="span5 bottom">
 			<div class="row">
 				<div class="span5">
 					<span class="bold"><%= link_to recipe.name, recipe %></span>
@@ -28,7 +28,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="span5 bottom">
+				<div class="span5">
 					<%= image_tag recipe.user.profile.picture, :size => "40x40", :class => "float_left" %>
 					<%= link_to recipe.user.name, recipe.user %>
 				</div>
