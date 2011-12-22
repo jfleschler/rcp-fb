@@ -46,11 +46,8 @@ $(document).ready(function(){
     // ------------------------------------------------------------------------------------------------------
 
     $('img.captify').captify({
-        speedOver: 'fast',
         speedOut: 'fast',
-        hideDelay: 500, 
-        animation: 'slide',      
-        opacity: '0.7',                   
+        hideDelay: 0,                
         position: 'top'
     });
 
