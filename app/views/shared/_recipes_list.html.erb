@@ -36,6 +36,6 @@
 		</div>
 		</div>
 	</div>
-	<%= cycle("",raw("</div>")) %>
-	<%= raw("</div>") if current_cycle == "" && @recipes.last == recipe %>
+	<%= raw("</div>") if current_cycle == "" %>
+	<%= raw("</div>") if current_cycle != "" && @recipes.last == recipe %>
 <% end %>
