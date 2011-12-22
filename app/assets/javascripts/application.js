@@ -10,6 +10,7 @@
 //= require bootstrap-modal
 //= require bootstrap-twipsy
 //= require bootstrap-popover
+//= require captify.tiny
 
 
 $.ajaxSetup({ 
@@ -44,7 +45,7 @@ $(document).ready(function(){
     flashbar.slideToggle("slow").delay(2000).slideToggle("slow");
     // ------------------------------------------------------------------------------------------------------
 
-
+    $('img.captify').captify({});
 
     $("body").unbind('click').bind("click", function (e) {
         $('a.menu').parent("li").removeClass("open");
