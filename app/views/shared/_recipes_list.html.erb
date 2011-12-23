@@ -3,10 +3,14 @@
 <div class="images">
 <% @recipes.each do |recipe| %>
 
+	<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
+		<%= public_private_button recipe %>
+	<% end %>
 			<% unless recipe.image_url(:preview).nil? %>
 				<%= link_to (image_tag recipe.image_url(:preview), :class => "captify", :alt => recipe.name, :size => "150x150"), recipe %>
 			<% else %>
 				<%= link_to (image_tag 'recipe_placeholder.png', :class => "captify", :alt => recipe.name, :size => "150x150"), recipe %>
 			<% end %>
+			
 <% end %>
 </div>
