@@ -77,10 +77,10 @@ class RecipesController < ApplicationController
 
   def toggle
     @user = User.find(params[:user_id])
-    recipe = Recipe.find(params[:id])
+    @recipe = Recipe.find(params[:id])
     
-    recipe.isPublic = recipe.isPublic == false
-    recipe.save
+    @recipe.isPublic = @recipe.isPublic == false
+    @recipe.save
 
     if(@user == current_user) 
       @recipes = @user.recipes.paginate(:page => params[:page], :per_page => 30)
