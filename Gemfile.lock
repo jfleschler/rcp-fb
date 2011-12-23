@@ -95,6 +95,10 @@ GEM
     rack (1.3.5)
     rack-cache (1.1)
       rack (>= 0.4)
+    rack-gridfs (0.4.1)
+      mime-types
+      mongo (~> 1.2)
+      rack
     rack-mount (0.8.3)
       rack (>= 1.0.0)
     rack-oauth2 (0.11.0)
@@ -166,6 +170,7 @@ DEPENDENCIES
   mongoid (~> 2.3)
   omniauth
   omniauth-facebook
+  rack-gridfs
   rails (= 3.1.1)
   rmagick
   sass-rails (~> 3.1.4)
