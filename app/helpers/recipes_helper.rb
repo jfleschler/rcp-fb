@@ -11,9 +11,9 @@ module RecipesHelper
 
 	def public_private_button(recipe)
 		if recipe.isPublic?
-			link_to "public", url_for(:controller => 'recipes', :action => 'toggle', :toggle => true, :user_id => @user, :id => recipe), :method => 'put', :remote => true, :class => "label success" 
+			link_to "public", url_for(:controller => 'recipes', :action => 'toggle', :toggle => true, :user_id => @user, :id => recipe), :method => 'put', :remote => true, :class => "label success", :id => "p_#{recipe.id}"
 		else 
-			link_to "private", url_for(:controller => 'recipes', :action => 'toggle', :toggle => true, :user_id => @user, :id => recipe), :method => 'put', :remote => true, :class => "label important" 
+			link_to "private", url_for(:controller => 'recipes', :action => 'toggle', :toggle => true, :user_id => @user, :id => recipe), :method => 'put', :remote => true, :class => "label important", :id => "p_#{recipe.id}"
 		end
 	end
 
