@@ -23,6 +23,7 @@
 	font-family: Arial;	
 	background: #000;
 	text-shadow: 1px 1px 0 #202020;
+	text-decoration: none;
 }
 .caption-top {
 }
@@ -61,7 +62,6 @@ br.c { clear: both; }
 
 .images .label {
 	position: absolute;
-	top: 3px;
+	top: 300px;
 	right: 3px;
-	z-index: 1000;
 }
