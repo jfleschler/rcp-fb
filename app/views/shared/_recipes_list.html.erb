@@ -11,6 +11,14 @@
 			<% else %>
 				<%= link_to (image_tag 'recipe_placeholder.png', :class => "captify", :alt => recipe.name, :size => "150x150"), recipe %>
 			<% end %>
-			
+
 <% end %>
 </div>
+
+<script>
+    $('img.captify').captify({
+        speedOut: 'fast',
+        className: 'caption-bottom'
+        hideDelay: 0
+    });
+</script>

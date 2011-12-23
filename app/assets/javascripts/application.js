@@ -45,11 +45,7 @@ $(document).ready(function(){
     flashbar.slideToggle("slow").delay(2000).slideToggle("slow");
     // ------------------------------------------------------------------------------------------------------
 
-    $('img.captify').captify({
-        speedOut: 'fast',
-        className: 'caption-bottom',
-        hideDelay: 0
-    });
+
 
     $("body").unbind('click').bind("click", function (e) {
         $('a.menu').parent("li").removeClass("open");
