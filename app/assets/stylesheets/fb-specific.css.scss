@@ -23,13 +23,11 @@ a:hover {
 	color: #ffffff;	
 	padding: 1.2em;	
 	padding-left: 0.2em;
-	margin-right: 5px;
-	//font-weight: bold;
-	font-size: 20px;	
-	font-family: Arial;	
+	padding-right: 10px;
+	font-size: 20px;
+	font-family: Arial;
 	background: #000;
 	text-shadow: 1px 1px 0 #202020;
-	text-decoration: none;
 }
 .caption-top {
 }
@@ -37,13 +35,11 @@ a:hover {
 }
 .caption a, .caption a {
 	border: 0 none;
-	text-decoration: none;
 	background: #000000;
 	padding: 0.3em;
 }
 .caption a:hover, .caption a:hover {
 	background: #202020;
-	text-decoration: none;
 }
 .caption-wrapper {
 	float: left;
