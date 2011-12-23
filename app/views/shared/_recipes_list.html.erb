@@ -2,9 +2,9 @@
 
 <div class="images">
 <% @recipes.each do |recipe| %>
-<span>
+<span class="image_box">
 	<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
-		<%= public_private_button recipe %>
+		<span id="p_<%= recipe.id %>"><%= public_private_button recipe %></span>
 	<% end %>
 			<% unless recipe.image_url(:preview).nil? %>
 				<%= link_to (image_tag recipe.image_url(:preview), :class => "captify", :alt => recipe.name, :size => "150x150"), recipe %>

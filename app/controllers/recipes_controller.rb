@@ -82,12 +82,6 @@ class RecipesController < ApplicationController
     @recipe.isPublic = @recipe.isPublic == false
     @recipe.save
 
-    if(@user == current_user) 
-      @recipes = @user.recipes.paginate(:page => params[:page], :per_page => 30)
-    else
-      @recipes = @user.recipes.public.paginate(:page => params[:page], :per_page => 30)
-    end
-
     respond_to do |format|
       format.js
     end
