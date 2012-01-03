@@ -8,9 +8,11 @@
 </div>
 
 <div class="container edit">
-<div class="container-fluid" id="main">
+<div class="container-fluid">
 	<div class="sidebar" id="sidebar">
-		<%= render :partial => 'ingredientList' %>
+		<div id="sidebar-wrapper">
+			<%= render :partial => 'ingredientList' %>
+		</div>
 	</div>
 	<div class="content">
 		<div class="row">
@@ -37,8 +39,8 @@
 
 <script type="text/javascript">
 	var Scroller = new MYAPP.FixedInfoScroller({
-		wrapper						: '#sidebar',
+		wrapper						: '#sidebar-wrapper',
 		fixedElement			: '#ingredient_list',
-		relativeToElement	: '#main'
+		relativeToElement	: '#sidebar'
 	});
 </script>
