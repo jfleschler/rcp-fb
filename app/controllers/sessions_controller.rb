@@ -4,6 +4,12 @@ class SessionsController < ApplicationController
   	user = User.where(:provider => auth['provider'], 
                       :uid => auth['uid']).first || User.create_with_omniauth(auth)
   	session[:user_id] = user.id
+
+    #Update User Picture
+
+    user.picture = profile.picture
+    user.save
+    
   	redirect_back_or root_url
   end
 
