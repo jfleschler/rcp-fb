@@ -46,7 +46,7 @@ MYAPP.FixedInfoScroller = function (options) {
 				
 				wrapper.height(wrapper.height());
 				fixedElement.css("right", relativeToRight);
-
+alert(relativeToRight);
 			} else if ((viewTop <= wrapperTop) && fixedElement.is(".fixed-module")) {
 
 				// Make the placeholder height auto again.
