@@ -35,6 +35,7 @@ MYAPP.FixedInfoScroller = function (options) {
 
 			// Get the current scroll of the window.
 			var viewTop = view.scrollTop() + 70;
+			var fixedElementLeft = (view.width() - 940) / 2
 			var fixedElementBottom = fixedElement.offset().top + fixedElement.height() + 100;
 
 			// Check to see if the view had scroll down
@@ -45,7 +46,7 @@ MYAPP.FixedInfoScroller = function (options) {
 				fixedElement.addClass("fixed-module");
 				
 				wrapper.height(wrapper.height());
-				fixedElement.css("left", relativeToRight);
+				fixedElement.css("left", fixedElementLeft);
 
 			} else if ((viewTop <= wrapperTop) && fixedElement.is(".fixed-module")) {
 
