@@ -11,6 +11,7 @@
 //= require bootstrap-twipsy
 //= require bootstrap-popover
 //= require captify.tiny
+//= require scroller
 
 
 $.ajaxSetup({ 
