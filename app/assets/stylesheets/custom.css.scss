@@ -1,6 +1,6 @@
 #sidebar { position: absolute; left: 40px; top: 75; }
 #ingredient_list   { float: left; width: 200px; position: absolute; left: 0 }
-#ingredient_list.absolute-module { left: auto; }
+
 #ingredient_list.fixed-module { position: fixed; top: 75px;}
 #ingredient_list.absolute-bottom-module { position: absolute; bottom: 0; }
 
