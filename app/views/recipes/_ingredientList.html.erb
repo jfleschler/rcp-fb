@@ -32,7 +32,9 @@
 				<%= "#{a.amount} #{a.ingredient.name}" %>
 			</p>
 		<% end %>
-		<hr />
+		<% unless s.associations.empty? %>
+			<hr />
+		<% end %>
 	<% end %>
 
 	<% @recipe.recipes_as_ingredients.each do |r| %>
