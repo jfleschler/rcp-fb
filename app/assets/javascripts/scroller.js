@@ -34,7 +34,7 @@ MYAPP.FixedInfoScroller = function (options) {
 			var relativeToRight = relativeToElement.offset().right + relativeToElement.width() + parseInt(relativeToElementMargin);
 
 			// Get the current scroll of the window.
-			var viewTop = view.scrollTop();
+			var viewTop = view.scrollTop() + 75;
 			var fixedElementBottom = fixedElement.offset().top + fixedElement.height() + 100;
 
 			// Check to see if the view had scroll down
