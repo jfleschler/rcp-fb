@@ -45,14 +45,14 @@ MYAPP.FixedInfoScroller = function (options) {
 				fixedElement.addClass("fixed-module");
 				
 				wrapper.height(wrapper.height());
-				fixedElement.css("right", relativeToRight);
+				fixedElement.css("left", relativeToRight);
 
 			} else if ((viewTop <= wrapperTop) && fixedElement.is(".fixed-module")) {
 
 				// Make the placeholder height auto again.
 				wrapper.css("height", "auto");
 				fixedElement.removeClass("fixed-module");
-				fixedElement.css("right", "")
+				fixedElement.css("left", "")
 				fixedElement.removeClass("absolute-bottom-module");
 
 			} else if ((viewTop > wrapperTop) && fixedElement.is(".fixed-module") && !fixedElement.is(".absolute-bottom-module")) {
