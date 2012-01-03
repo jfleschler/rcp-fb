@@ -35,8 +35,8 @@ MYAPP.FixedInfoScroller = function (options) {
 
 			// Get the current scroll of the window.
 			var viewTop = view.scrollTop() + 70;
-			var fixedElementLeft = (view.width() - 940) / 2
-			var fixedElementBottom = fixedElement.offset().top + fixedElement.height() + 100;
+			var fixedElementLeft = ($(document).width() - 940) / 2
+			var fixedElementBottom = fixedElement.offset().top + fixedElement.height() + 10;
 
 			// Check to see if the view had scroll down
 			// past the top of the placeholder AND that
