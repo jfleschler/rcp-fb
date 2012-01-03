@@ -26,7 +26,7 @@ MYAPP.FixedInfoScroller = function (options) {
 		view.bind("scroll resize", function() {
 
 			var wrapperTop = wrapper.offset().top;
-			var relativeToElementMargin = relativeToElement.css("padding-left");
+			var relativeToElementMargin = relativeToElement.css("margin-left");
 			if (relativeToElementMargin.indexOf("px") > 0){
 				relativeToElementMargin = relativeToElementMargin.replace("px", "");
 			}
@@ -36,7 +36,7 @@ MYAPP.FixedInfoScroller = function (options) {
 			// Get the current scroll of the window.
 			var viewTop = view.scrollTop() + 70;
 			var fixedElementBottom = fixedElement.offset().top + fixedElement.height() + 100;
-alert(viewTop);
+
 			// Check to see if the view had scroll down
 			// past the top of the placeholder AND that
 			// the message is not yet fixed.
