@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
   	session[:user_id] = user.id
 
     #Update User Picture
-
     user.picture = user.profile.picture
     user.save
     
