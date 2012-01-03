@@ -25,10 +25,13 @@
 <div class="ingredient_list">
 	<h3>ingredients</h3>
 	<hr />
-	<% @recipe.getAssociations.each do |a| %>
-		<p>
-			<%= "#{a.amount} #{a.ingredient.name}" %>
-		</p>
+	<% @recipe.steps.each do |s| %>
+		<% s.associations.each do |a| %>
+			<p>
+				<%= "#{a.amount} #{a.ingredient.name}" %>
+			</p>
+		<% end %>
+		<hr />
 	<% end %>
 
 	<% @recipe.recipes_as_ingredients.each do |r| %>
