@@ -97,6 +97,7 @@ $(document).ready(function(){
         $(modals).modal('hide');
         $('#associations_selectedAmount').val($('#associations_amount').val() + ' ' + $('#associations_amount_unit').val());
         $('#associations_help').parent($('form')).submit(); 
+        return false;
     });
 
     // --- NEW RECIPE MODAL OPEN
