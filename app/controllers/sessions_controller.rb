@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     #Update User Picture
 
-    user.picture = profile.picture
+    user.picture = user.profile.picture
     user.save
     
   	redirect_back_or root_url
