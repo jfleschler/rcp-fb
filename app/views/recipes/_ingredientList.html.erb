@@ -1,3 +1,4 @@
+<div id="ingredient_list">
 <% unless @recipe.cook_time == "" && @recipe.temperature == "" %>
 <div class="recipe_settings">
 	<div class="row">
@@ -22,7 +23,7 @@
 </div>
 <% end %>
 
-<div class="ingredient_list" id="ingredient_list">
+<div class="ingredient_list" >
 	<h3>ingredients</h3>
 	<hr />
 	<% @recipe.steps.each do |s| %>
@@ -47,4 +48,5 @@
 			</p>
 		<% end %>
 	<% end %>
+</div>
 </div>
