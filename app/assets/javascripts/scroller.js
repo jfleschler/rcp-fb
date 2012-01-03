@@ -34,7 +34,7 @@ MYAPP.FixedInfoScroller = function (options) {
 			var relativeToRight = relativeToElement.offset().right + relativeToElement.width() + parseInt(relativeToElementMargin);
 
 			// Get the current scroll of the window.
-			var viewTop = view.scrollTop();// + 75;
+			var viewTop = view.scrollTop() + 75;
 			var fixedElementBottom = fixedElement.offset().top + fixedElement.height() + 100;
 
 			// Check to see if the view had scroll down
@@ -45,14 +45,14 @@ MYAPP.FixedInfoScroller = function (options) {
 				fixedElement.addClass("fixed-module");
 				
 				wrapper.height(wrapper.height());
-				//fixedElement.css("right", "");
+				fixedElement.css("right", relativeToRight);
 
 			} else if ((viewTop <= wrapperTop) && fixedElement.is(".fixed-module")) {
 
 				// Make the placeholder height auto again.
 				wrapper.css("height", "auto");
 				fixedElement.removeClass("fixed-module");
-				//fixedElement.css("right", "")
+				fixedElement.css("right", "")
 				fixedElement.removeClass("absolute-bottom-module");
 
 			} else if ((viewTop > wrapperTop) && fixedElement.is(".fixed-module") && !fixedElement.is(".absolute-bottom-module")) {
