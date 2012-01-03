@@ -45,7 +45,7 @@ MYAPP.FixedInfoScroller = function (options) {
 				fixedElement.addClass("fixed-module");
 				
 				wrapper.height(wrapper.height());
-				fixedElement.css("right", relativeToRight);
+				fixedElement.css("right", "");
 
 			} else if ((viewTop <= wrapperTop) && fixedElement.is(".fixed-module")) {
 
