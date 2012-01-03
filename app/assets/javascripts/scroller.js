@@ -26,12 +26,12 @@ MYAPP.FixedInfoScroller = function (options) {
 		view.bind("scroll resize", function() {
 
 			var wrapperTop = wrapper.offset().top;
-			var relativeToElementMargin = relativeToElement.css("margin-left");
+			var relativeToElementMargin = relativeToElement.css("padding-left");
 			if (relativeToElementMargin.indexOf("px") > 0){
 				relativeToElementMargin = relativeToElementMargin.replace("px", "");
 			}
 			var relativeToElementBottom = relativeToElement.offset().top + relativeToElement.height();
-			var relativeToRight = relativeToElement.offset().right + relativeToElement.width() + parseInt(relativeToElementMargin);
+			var relativeToRight = parseInt(relativeToElementMargin);
 
 			// Get the current scroll of the window.
 			var viewTop = view.scrollTop() + 75;
@@ -46,7 +46,7 @@ MYAPP.FixedInfoScroller = function (options) {
 				
 				wrapper.height(wrapper.height());
 				fixedElement.css("right", relativeToRight);
-alert(relativeToRight);
+
 			} else if ((viewTop <= wrapperTop) && fixedElement.is(".fixed-module")) {
 
 				// Make the placeholder height auto again.
