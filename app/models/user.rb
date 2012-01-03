@@ -5,6 +5,7 @@ class User
   field :access_token, :type => String
   field :name, :type => String
   field :email, :type => String
+  field :picture, :type => String
 
   attr_protected :provider, :uid, :access_token, :name, :email
 
@@ -21,6 +22,7 @@ class User
       if auth['credentials']
       	 user.access_token = auth['credentials']['token'] || ""
       end
+      user.picture = profile.picture
     end
   end
 
