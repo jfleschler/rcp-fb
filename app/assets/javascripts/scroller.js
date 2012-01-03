@@ -74,6 +74,11 @@ MYAPP.FixedInfoScroller = function (options) {
 				
 			}
 			
+			if ((viewTop > wrapperTop) && fixedElement.is(".fixed-module")) {
+
+				wrapper.height(wrapper.height());
+				fixedElement.css("left", fixedElementLeft);
+			}
 			
 		});		
 		
