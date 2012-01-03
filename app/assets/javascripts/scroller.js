@@ -34,9 +34,9 @@ MYAPP.FixedInfoScroller = function (options) {
 			var relativeToRight = parseInt(relativeToElementMargin);
 
 			// Get the current scroll of the window.
-			var viewTop = view.scrollTop() + 80;
+			var viewTop = view.scrollTop() + 70;
 			var fixedElementBottom = fixedElement.offset().top + fixedElement.height() + 100;
-
+alert(viewTop);
 			// Check to see if the view had scroll down
 			// past the top of the placeholder AND that
 			// the message is not yet fixed.
