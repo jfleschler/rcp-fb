@@ -6,7 +6,6 @@ RcpFb::Application.routes.draw do
 
   resources :steps,          :only => [:update] do
     post :prioritize, :on => :collection
-    #post :save_note, :on => :collection
   end
   resources :recipes,        :only => [:update] do
     post :prioritize, :on => :collection
