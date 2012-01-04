@@ -1,4 +1,4 @@
-
+<div class="recipe_header">
 <% unless recipe.image_url(:preview).nil? %>
 	<%= image_tag recipe.image_url(:preview), :class => "pull_left", :size => "150x150" %>
 <% else %>
@@ -6,6 +6,7 @@
 <% end %>
 <h1><%= @recipe.name %></h1>
 <hr />
+</div>
 <div class="span12 columns">
 	<h3 id="step_header">steps</h3>
 		<%= render @recipe.steps.ordered %>
