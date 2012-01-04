@@ -8,7 +8,7 @@
   <%= javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? %>
 </head>
 <body>
-<div class="topbar"> 
+<div class="topbar" id="topbar"> 
   	<div class="fill"> 
 	    <div class="container"> 
 	    	<h3 class="bold"><%= link_to "rcp", root_path %></h3>

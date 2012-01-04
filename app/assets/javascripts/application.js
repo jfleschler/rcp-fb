@@ -10,6 +10,7 @@
 //= require bootstrap-modal
 //= require bootstrap-twipsy
 //= require bootstrap-popover
+//= require bootstrap-dropdown
 //= require captify.tiny
 //= require scroller
 
@@ -48,14 +49,7 @@ $(document).ready(function(){
 
 
 
-    $("body").unbind('click').bind("click", function (e) {
-        $('a.menu').parent("li").removeClass("open");
-    });
-
-    $("a.menu").unbind('click').click(function (e) {
-        var $li = $(this).parent("li").toggleClass('open');
-        return false;
-    });
+    $('#topbar').dropdown();
 
 	$('.ingredient').twipsy({
         live: true
