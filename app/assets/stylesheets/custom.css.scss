@@ -9,7 +9,8 @@
 
 .recipe_header {
   border: none;
-
+  margin-bottom: -30px;
+  
   tr, td {
     margin: 0;
     padding: 0;
@@ -285,7 +286,6 @@ label {
 h1 {
   font-family: 'GoodDogRegular';
 	font-size: 48px;
-	//margin-bottom: -30px;
 
   small {
     font-size: 14px;
