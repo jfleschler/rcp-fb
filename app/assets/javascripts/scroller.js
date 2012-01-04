@@ -72,6 +72,10 @@ MYAPP.FixedInfoScroller = function (options) {
 				if (viewTop <= fixedElement.offset().top){
 					fixedElement.removeClass("absolute-bottom-module");
 					fixedElement.css("top", "");
+					fixedElement.addClass("fixed-module");
+					
+					wrapper.height(wrapper.height());
+					fixedElement.css("left", fixedElementLeft);
 				}
 				
 			}
