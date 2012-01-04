@@ -1,8 +1,7 @@
-<div class="recipe_header">
-
-<h1 style="background: url(<%= recipe.image_url(:preview) %>) no-repeat left center; height:150px;"><%= @recipe.name %></h1>
+<h1 style="background: url(<%= recipe.image_url(:preview) %>) no-repeat left center; display:inline;">
+		<%= @recipe.name %>
+</h1>
 <hr />
-</div>
 <div class="span12 columns">
 	<h3 id="step_header">steps</h3>
 		<%= render @recipe.steps.ordered %>
