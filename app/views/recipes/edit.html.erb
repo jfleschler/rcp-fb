@@ -18,7 +18,16 @@
 	</div>
 	<div class="content">
 		<div class="row">
-			<h1><%= @recipe.name %></h1>
+			<table class="recipe_header">
+				<tr>
+					<td id="recipe_image">
+						<%= recipe_image_or_placeholder recipe %>
+					</td>
+					<td id="recipe_name">
+						<h1><%= @recipe.name %></h1>
+					</td>
+				</tr>
+			</table>
 			<hr />
 			
 			<div class="span12 columns">
