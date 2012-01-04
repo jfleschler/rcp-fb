@@ -7,12 +7,12 @@
   align: top;
 }
 
-h1.recipe_header {
-  display: inline;
+.recipe_header {
+  border: none;
 
-  img {
-    float: left;
-    margin-right: 5px;
+  tr, td {
+    margin: 0;
+    padding: 0;
   }
 }
 
