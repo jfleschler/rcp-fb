@@ -7,8 +7,12 @@
 .push_up {
   align: top;
 }
-.recipe_header {
+h1.recipe_header {
   display: inline;
+
+  img {
+    float: left;
+  }
 }
 
 .hidden {
