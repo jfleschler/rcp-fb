@@ -47,8 +47,6 @@ $(document).ready(function(){
     flashbar.slideToggle("slow").delay(2000).slideToggle("slow");
     // ------------------------------------------------------------------------------------------------------
 
-
-
     $('#topbar').dropdown();
 
 	$('.ingredient').twipsy({
