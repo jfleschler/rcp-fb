@@ -15,4 +15,12 @@ module ApplicationHelper
 	def delete_association_tag(recipe, step, association)
 		link_to (image_tag 'redx.png'), recipe_step_association_path(recipe, step, association), :confirm => "Are you sure?", :method => :delete, :remote => true
 	end
+
+	def recipe_image_or_placeholder(recipe)
+		unless recipe.image_url(:preview).nil?
+	 		image_tag recipe.image_url(:preview), :size => "150x150"
+		else
+			image_tag 'recipe_placeholder.png', :size => "150x150" 
+		end
+	end
 end

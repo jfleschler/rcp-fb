@@ -25,14 +25,6 @@ module RecipesHelper
 		end
 	end
 
-	def recipe_image_or_placeholder(recipe)
-		unless recipe.image_url(:preview).nil?
-	 		image_tag recipe.image_url(:preview), :size => "150x150"
-		else
-			image_tag 'recipe_placeholder.png', :size => "150x150" 
-		end
-	end
-
 	def is_last?(recipe, last)
 		if recipe == last
 			"last"
