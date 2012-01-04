@@ -1,10 +1,6 @@
 <div class="recipe_header">
-<% unless recipe.image_url(:preview).nil? %>
-	<%= image_tag recipe.image_url(:preview), :class => "pull_left", :size => "150x150" %>
-<% else %>
-	<%= image_tag 'recipe_placeholder.png', :class => "pull_left", :size => "150x150" %>
-<% end %>
-<h1><%= @recipe.name %></h1>
+
+<h1 style="background: url(<%= recipe.image_url(:preview) %>) no-repeat right center;"><%= @recipe.name %></h1>
 <hr />
 </div>
 <div class="span12 columns">
