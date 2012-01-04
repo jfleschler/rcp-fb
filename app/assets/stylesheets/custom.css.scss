@@ -13,6 +13,7 @@
   tr, td {
     margin: 0;
     padding: 0;
+    border: 0;
   }
 }
 
@@ -275,7 +276,8 @@ label {
 }
 
 h1 {
-	font: 52px/58px 'GoodDogRegular', Arial, sans-serif;letter-spacing: 0;
+  font-family: 'GoodDogRegular';
+	font-size: 48px;
 	margin-bottom: -30px;
 
   small {
