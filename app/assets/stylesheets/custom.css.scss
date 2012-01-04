@@ -1,4 +1,3 @@
-//#sidebar { position: absolute; left: 40px; top: 75; }
 #ingredient_list   { float: left; width: 200px; position: absolute; left: 0 }
 
 #ingredient_list.fixed-module { position: fixed; top: 70px;}
@@ -14,6 +13,9 @@ h1.recipe_header {
   img {
     float: left;
     padding-right: 5px;
+  }
+  span {
+    vertical-align: baseline;
   }
 }
 
