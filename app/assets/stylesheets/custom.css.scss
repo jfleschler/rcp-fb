@@ -10,7 +10,7 @@
 .recipe_header {
   border: none;
   margin-bottom: -30px;
-  
+
   tr, td {
     margin: 0;
     padding: 0;
@@ -20,6 +20,7 @@
 
 td#recipe_name {
   vertical-align: bottom;
+  padding: 5px;
 }
 td#recipe_image {
   width: 5px;
