@@ -38,11 +38,8 @@
 
 	<% @recipe.recipes_as_ingredients.each do |r| %>
 		<p>&nbsp;</p>
-		
 			<h3><%= "#{r.name}" %></h3>
 			<hr />
-		
-
 		<% r.getAssociations.each do |a| %>
 			<p>
 				<%= "#{a.amount} #{a.ingredient.name}" %>
