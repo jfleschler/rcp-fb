@@ -1,2 +1,8 @@
-production:
-  categories: ["Appetizers","Breads","Desserts","Drinks","Main Dishes","Salads","Side Dishes","Snacks","Soups"]
+production: &defaults
+	categories: ["Appetizers","Breads","Desserts","Drinks","Main Dishes","Salads","Side Dishes","Snacks","Soups"]
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
