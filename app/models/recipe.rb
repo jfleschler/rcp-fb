@@ -11,6 +11,7 @@ class Recipe
 	field :makes,		    		:type => String
 	field :has_ingredient,	:type => String
 	field :category,				:type => String
+	field :tags,						:type => String
 	
   belongs_to :user
 	has_many :steps, :dependent => :destroy

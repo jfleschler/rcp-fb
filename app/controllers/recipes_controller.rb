@@ -34,6 +34,7 @@ class RecipesController < ApplicationController
     @recipe = current_user.recipes.find(params[:id])
     @recipe.name = params[:name]
     @recipe.category  = params[:category]
+    @recipe.tags  = params[:tags]
     @recipe.cook_time = params[:cook_time]
     @recipe.cook_temp = params[:cook_temp] 
     @recipe.temp_unit = params[:temp_unit]
@@ -52,6 +53,7 @@ class RecipesController < ApplicationController
 	  @recipe = current_user.recipes.new
     @recipe.name = params[:name]
     @recipe.category  = params[:category]
+    @recipe.tags  = params[:tags]
     @recipe.cook_time = params[:cook_time]
     @recipe.cook_temp = params[:cook_temp] 
     @recipe.temp_unit = params[:temp_unit]
