@@ -40,7 +40,7 @@
       <div class="clearfix">
         <%= label_tag :category, "category" %>
         <div class="input">
-        <%= select_tag :category, options_for_select(YAML.load_file("#{RAILS_ROOT}/config/app_config.yml")[Categories]) %>
+        <%= select_tag :category, options_for_select(YAML.load_file("#{Rails.root}/config/app_config.yml")[Categories]) %>
         </div>
       </div>
 
