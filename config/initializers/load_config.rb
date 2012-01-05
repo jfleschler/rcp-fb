@@ -1,1 +1,3 @@
-RECIPE_CATEGORIES = YAML.load_file("#{Rails.root}/config/config.yml")[Rails.env][categories]
+APP_CONFIG = YAML.load_file("#{Rails.root}/config/app_config.yml")[Rails.env]
+
+RECIPE_CATEGORIES = APP_CONFIG[categories]
