@@ -40,7 +40,8 @@
       <div class="clearfix">
         <%= label_tag :category, "category" %>
         <div class="input">
-        <%= select_tag :category, options_for_select(RECIPE_CATEGORIES) %>
+        <%= select_tag :category, options_for_select( APP_CONFIG['categories'] ) %>
+        <%= RECIPE_CATEGORIES.to_s %>
         </div>
       </div>
 
