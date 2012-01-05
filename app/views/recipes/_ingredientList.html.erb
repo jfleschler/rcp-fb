@@ -49,7 +49,7 @@
 	
 	<div>
 		<br />
-		<% unless @recipe.category.nil? %>
+		<% unless @recipe.category.empty? %>
 			<span class="label notice"><%= @recipe.category %></span>
 		<% end %>
 		<% unless @recipe.tags.nil? %>
