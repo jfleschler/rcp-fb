@@ -48,9 +48,13 @@
 	<% end %>
 	<div>
 		<br />
-		<span class="label notice"><%= @recipe.category %></span>
+		<% unless @recipe.category.empty? %>
+			<span class="label notice"><%= @recipe.category %></span>
+		<% end %>
+		<% unless @recipe.tags.empty? %>
 		<% @recipe.tags.split(',').each do |tag| %>
 			<span class="label"><%= tag.strip %></span>
+		<% end %>
 		<% end %>
 	</div>
 </div>
