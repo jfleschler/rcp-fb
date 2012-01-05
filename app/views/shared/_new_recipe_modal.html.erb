@@ -36,7 +36,14 @@
         <%= file_field_tag :image %>
         </div>
       </div>
-        
+
+      <div class="clearfix">
+        <%= label_tag :category, "category" %>
+        <div class="input">
+        <%= select_tag :category, options_for_select(YAML.load_file("#{RAILS_ROOT}/config/app_config.yml")[Categories]) %>
+        </div>
+      </div>
+
     </div>
     <div class="modal-footer"> 
       <%= f.submit "create", :class => "btn primary", :id => "submitRecipe" %>
