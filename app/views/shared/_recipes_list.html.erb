@@ -1,7 +1,6 @@
-<%= will_paginate @recipes %>
+
 
 <% RECIPE_CATEGORIES.each do |category| %>
-<div class="clearfix">
 <div><%= category %></div>
 	<div class="images">
 		<% @recipes.where(category: category).each do |recipe| %>
@@ -17,8 +16,7 @@
 			</span>
 		<% end %>
 	</div>
-	</div>
-	<br />
+	<br class="c" />
 <% end %>
 
 <script>

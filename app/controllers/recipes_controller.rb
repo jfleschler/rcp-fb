@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
   before_filter :authenticate, :only => [:create, :destroy, :update]
 
   def index
-  	@recipes = Recipe.public.paginate(:page => params[:page], :per_page => 30)
+  	@recipes = Recipe.public #.paginate(:page => params[:page], :per_page => 30)
   end
 
   def show
