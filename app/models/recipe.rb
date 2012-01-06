@@ -19,7 +19,9 @@ class Recipe
 	mount_uploader :image, ImageUploader
 
   default_scope order_by([:created_at, :asc])
-	scope :public, lambda { where(:isPublic => true) }
+	scope :public, lambda { |cate| 
+		where(:isPublic => true).where(category: cate.to_s) 
+	}
 
 	def step_attributes=(step_attributes)
 	  step_attributes.each do |attributes|
