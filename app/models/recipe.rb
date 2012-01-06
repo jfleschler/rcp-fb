@@ -61,7 +61,7 @@ class Recipe
 	class << self
 
 		def in_category(cate)
-			where(category: "Desserts")
+			where(category: cate)
 		end
 
 	end
