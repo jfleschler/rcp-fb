@@ -21,6 +21,16 @@ class Recipe
   default_scope order_by([:created_at, :asc])
 	scope :public, -> { where(:isPublic => true) }
 	
+
+	def self.in_category(myCategory)
+	  if myCategory
+	  	Recipe.all(conditions: { category: /#{myCategory}/i })
+	  else
+	    Recipe.find(:all)
+	  end
+	end
+
+
 	def step_attributes=(step_attributes)
 	  step_attributes.each do |attributes|
 	    steps.build(attributes)
@@ -56,13 +66,5 @@ class Recipe
 			end
 		end
 		return r_as_i
-	end
-
-	class << self
-
-		def in_category(cate)
-			where(category: cate)
-		end
-
 	end
 end
