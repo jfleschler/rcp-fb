@@ -22,7 +22,7 @@ class Recipe
 	scope :public, 			-> 		{ where(:isPublic => true) }
 	scope :inCategory, 	->(c) { where("category = '#{c}'" ) }
 
-	def self.in_category(myCategory)
+	def self.in_c(myCategory)
 	  	Recipe.where(:category => "Desserts" )
 	end
 
