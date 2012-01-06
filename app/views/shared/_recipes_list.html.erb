@@ -4,8 +4,7 @@
 <div class="clearfix">
 <div><%= category %></div>
 	<div class="images">
-		<% @recipes.each do |recipe| %>
-		<% if recipe.category == category %>
+		<% @recipes.where(category: category).each do |recipe| %>
 			<span class="image_box">
 				<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
 					<span id="p_<%= recipe.id %>"><%= public_private_button recipe %></span>
@@ -16,7 +15,6 @@
 							<%= link_to (image_tag 'recipe_placeholder.png', :class => "captify", :alt => recipe.name, :size => "150x150"), recipe %>
 						<% end %>
 			</span>
-		<% end %>
 		<% end %>
 	</div>
 	</div>
