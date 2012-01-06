@@ -1,5 +1,5 @@
 production: &defaults
-  categories: ["", "Appetizers", "Breads", "Desserts", "Drinks", "Main Dishes", "Salads", "Side Dishes", "Snacks", "Soups"]
+  categories: ["Uncategorized", "Appetizers", "Breads", "Desserts", "Drinks", "Main Dishes", "Salads", "Side Dishes", "Snacks", "Soups"]
 
 development:
   <<: *defaults

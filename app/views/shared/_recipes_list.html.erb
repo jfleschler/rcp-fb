@@ -2,30 +2,9 @@
 
 <% RECIPE_CATEGORIES.each do |category| %>
 <div>
-	<% if category.empty? %>
-	 	Uncategorized
-	<% else %>
-		<%= category %>
-	 <% end %>
+	<%= category %>
 </div>
 	<div class="images">
-		<% if category.empty? %>
-
-			<% @recipes.where('$or' => [{:category.exists => false}, {:category => ""}]).each do |recipe| %>
-				<span class="image_box">
-					<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
-						<span id="p_<%= recipe.id %>"><%= public_private_button recipe %></span>
-					<% end %>
-							<% unless recipe.image_url(:preview).nil? %>
-								<%= link_to (image_tag recipe.image_url(:preview), :class => "captify", :alt => recipe.name, :size => "150x150"), recipe %>
-							<% else %>
-								<%= link_to (image_tag 'recipe_placeholder.png', :class => "captify", :alt => recipe.name, :size => "150x150"), recipe %>
-							<% end %>
-				</span>
-			<% end %>
-
-		<% else %>
-
 			<% @recipes.where(category: category).each do |recipe| %>
 				<span class="image_box">
 					<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
@@ -38,8 +17,6 @@
 							<% end %>
 				</span>
 			<% end %>
-
-		<% end %>
 	</div>
 	<br class="c" />
 <% end %>
