@@ -2,7 +2,11 @@
 
 <% RECIPE_CATEGORIES.each do |category| %>
 <div>
-	<%= category.empty? ? 'Uncategorized' : category %>
+	<%if category.empty? %>
+	 	Uncategorized
+	<% else %>
+		<%= category %>
+	 <% end %>
 </div>
 	<div class="images">
 		<% if category.empty? %>
