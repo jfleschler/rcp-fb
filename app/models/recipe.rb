@@ -23,7 +23,7 @@ class Recipe
 	scope :inCategory, 	->(c) { where(category: c) }
 
 	def self.in_c(myCategory)
-	  	Recipe.where( name: myCategory )
+	  	Recipe.where( category: myCategory )
 	end
 
 
