@@ -8,6 +8,7 @@ class RecipesController < ApplicationController
   	  @recipes = Recipe.public.in_category(category) #.paginate(:page => params[:page], :per_page => 30)
     else
       @recipes = Recipe.public #.paginate(:page => params[:page], :per_page => 30)
+    end
   end
 
   def show
