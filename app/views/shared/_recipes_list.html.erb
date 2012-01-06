@@ -1,6 +1,7 @@
 
 
 <% RECIPE_CATEGORIES.each do |category| %>
+<% unless @recipes.where(category: category).count = 0 %>
 <div>
 	<%= category %>
 </div>
@@ -19,6 +20,7 @@
 			<% end %>
 	</div>
 	<br class="c" />
+<% end %>
 <% end %>
 
 <script>
