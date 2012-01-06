@@ -1,6 +1,6 @@
 <div class="container">
 <h3>public recipes</h3>
 <hr />
-<%= params[:category] %>
+<%= @category %>
 <%= render :partial => 'shared/recipes_list', :locals => {:recipes => @recipes} %>
 </div>
