@@ -3,11 +3,10 @@ class RecipesController < ApplicationController
   before_filter :authenticate, :only => [:create, :destroy, :update]
 
   def index
-    unless params[:category] == ""
-  	  @recipes = Recipe.public.where(category: params[:category]) #.paginate(:page => params[:page], :per_page => 30)
-    else
-      @recipes = Recipe.public #.paginate(:page => params[:page], :per_page => 30)
-    end
+    category = params[:category]
+
+  	  @recipes = Recipe.public.where(category: category) #.paginate(:page => params[:page], :per_page => 30)
+
   end
 
   def show
