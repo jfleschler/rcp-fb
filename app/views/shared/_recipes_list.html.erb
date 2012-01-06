@@ -11,7 +11,7 @@
 	<div class="images">
 		<% if category.empty? %>
 
-			<% @recipes.where(:category.exists => false).each do |recipe| %>
+			<% @recipes.where(category: "").each do |recipe| %>
 				<span class="image_box">
 					<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
 						<span id="p_<%= recipe.id %>"><%= public_private_button recipe %></span>
