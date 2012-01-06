@@ -23,7 +23,7 @@ class Recipe
 	scope :inCategory, lambda { |c| where("category = '#{c}'" ) }
 
 	def self.in_category(myCategory)
-	  	Recipe.all(conditions: { category: /#{myCategory}/i })
+	  	Recipe.all(conditions: { category: /Desserts/i })
 	end
 
 
