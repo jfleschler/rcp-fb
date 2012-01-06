@@ -20,7 +20,7 @@ class Recipe
 
   default_scope order_by([:created_at, :asc])
 	scope :public, lambda { |cate| 
-		where(:isPublic => true).where(category: cate.to_s) 
+		where(category: cate.to_s).where(:isPublic => true)
 	}
 
 	def step_attributes=(step_attributes)
