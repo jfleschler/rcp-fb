@@ -1,8 +1,8 @@
-<%= #will_paginate @recipes %>
+
 
 <% RECIPE_CATEGORIES.each do |category| %>
 <div>
-	<%if category.empty? %>
+	<% if category.empty? %>
 	 	Uncategorized
 	<% else %>
 		<%= category %>
