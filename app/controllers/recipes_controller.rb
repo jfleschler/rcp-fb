@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
   def index
     @recipes = Recipe.public #.paginate(:page => params[:page], :per_page => 30)
     if params['category']
-      @recipes = Recipe.in_category(params[:category]).public
+      @recipes = Recipe.inCategory(params[:category])
     end
   end
 
