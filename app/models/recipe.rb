@@ -23,7 +23,7 @@ class Recipe
 	scope :inCategory, 	->(c) { where("category = '#{c}'" ) }
 
 	def self.in_category(myCategory)
-	  	Recipe.all(:category => ["Desserts"] )
+	  	Recipe.all(:category => "Desserts")
 	end
 
 
