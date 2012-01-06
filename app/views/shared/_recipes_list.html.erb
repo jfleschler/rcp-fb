@@ -1,19 +1,40 @@
-
+<%= #will_paginate @recipes %>
 
 <% RECIPE_CATEGORIES.each do |category| %>
-<div><%= category %></div>
+<div>
+	<%= category.empty? ? 'Uncategorized' : category %>
+</div>
 	<div class="images">
-		<% @recipes.where(category: category).each do |recipe| %>
-			<span class="image_box">
-				<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
-					<span id="p_<%= recipe.id %>"><%= public_private_button recipe %></span>
-				<% end %>
-						<% unless recipe.image_url(:preview).nil? %>
-							<%= link_to (image_tag recipe.image_url(:preview), :class => "captify", :alt => recipe.name, :size => "150x150"), recipe %>
-						<% else %>
-							<%= link_to (image_tag 'recipe_placeholder.png', :class => "captify", :alt => recipe.name, :size => "150x150"), recipe %>
-						<% end %>
-			</span>
+		<% if category.empty? %>
+
+			<% @recipes.where(:category.exists => false).each do |recipe| %>
+				<span class="image_box">
+					<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
+						<span id="p_<%= recipe.id %>"><%= public_private_button recipe %></span>
+					<% end %>
+							<% unless recipe.image_url(:preview).nil? %>
+								<%= link_to (image_tag recipe.image_url(:preview), :class => "captify", :alt => recipe.name, :size => "150x150"), recipe %>
+							<% else %>
+								<%= link_to (image_tag 'recipe_placeholder.png', :class => "captify", :alt => recipe.name, :size => "150x150"), recipe %>
+							<% end %>
+				</span>
+			<% end %>
+
+		<% else %>
+
+			<% @recipes.where(category: category).each do |recipe| %>
+				<span class="image_box">
+					<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
+						<span id="p_<%= recipe.id %>"><%= public_private_button recipe %></span>
+					<% end %>
+							<% unless recipe.image_url(:preview).nil? %>
+								<%= link_to (image_tag recipe.image_url(:preview), :class => "captify", :alt => recipe.name, :size => "150x150"), recipe %>
+							<% else %>
+								<%= link_to (image_tag 'recipe_placeholder.png', :class => "captify", :alt => recipe.name, :size => "150x150"), recipe %>
+							<% end %>
+				</span>
+			<% end %>
+
 		<% end %>
 	</div>
 	<br class="c" />
