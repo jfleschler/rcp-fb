@@ -20,14 +20,10 @@ class Recipe
 
   default_scope order_by([:created_at, :asc])
 	scope :public, -> { where(:isPublic => true) }
-	scope :inCategory, lambda { |c| where("category = #{c}") }
+	scope :inCategory, lambda { |c| where(category: /#{c}/ ) }
 
 	def self.in_category(myCategory)
-	  if myCategory
 	  	Recipe.all(conditions: { category: /#{myCategory}/i })
-	  else
-	    Recipe.find(:all)
-	  end
 	end
 
 
