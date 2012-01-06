@@ -4,9 +4,10 @@ class RecipesController < ApplicationController
 
   def index
     @category = params[:category]
-
-  	@recipes = Recipe.public(@category) #.paginate(:page => params[:page], :per_page => 30)
-
+    if @category
+  	  @recipes = Recipe.public.in_category(@category) #.paginate(:page => params[:page], :per_page => 30)
+    else
+      @recipes = Recipe.public #.paginate(:page => params[:page], :per_page => 30)
   end
 
   def show
