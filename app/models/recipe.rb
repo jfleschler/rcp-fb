@@ -19,8 +19,8 @@ class Recipe
 	mount_uploader :image, ImageUploader
 
   default_scope order_by([:created_at, :asc])
-	scope :public, 			-> { where(:isPublic => true) }
-	scope :inCategory, 	-> { |c| where("category = '#{c}'" ) }
+	scope :public, 			-> 		{ where(:isPublic => true) }
+	scope :inCategory, 	->(c) { where("category = '#{c}'" ) }
 
 	def self.in_category(myCategory)
 	  	Recipe.all(:category => ["Desserts"] )
