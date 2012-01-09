@@ -20,7 +20,7 @@ class Recipe
 
   default_scope order_by([:created_at, :asc])
 	scope :public, 			-> 		{ where(:isPublic => true) }
-	scope :inCategory, 	->(c) { where(in_category: c) }
+	scope :inCategory, 	->(c) { where( in_category: c ) }
 
 	def self.in_c(myCategory)
 	  	Recipe.where( in_category: myCategory )
