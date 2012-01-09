@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
 
   def index
     if params[:c]
-      @recipes = Recipe.where( in_category: "#{params[:c].strip}")
+      @recipes = Recipe.public.where( category: "#{params[:c].strip}")
     else
       @recipes = Recipe.public #.paginate(:page => params[:page], :per_page => 30)
     end
