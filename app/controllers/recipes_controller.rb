@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
 
   def index
     if params[:c]
-      @recipes = Recipe.public.in_c(params[:c].to_s)
+      @recipes = Recipe.public.in_c("#{params[:c].to_s}")
     else
       @recipes = Recipe.public #.paginate(:page => params[:page], :per_page => 30)
     end
