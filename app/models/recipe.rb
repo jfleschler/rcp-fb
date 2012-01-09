@@ -10,7 +10,7 @@ class Recipe
   field :temp_unit,  			:type => String
 	field :makes,		    		:type => String
 	field :has_ingredient,	:type => String
-	field :in_category,				:type => String
+	field :in_category,			:type => String
 	field :tags,						:type => String
 	
   belongs_to :user
