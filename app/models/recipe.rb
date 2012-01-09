@@ -10,7 +10,7 @@ class Recipe
   field :temp_unit,  			:type => String
 	field :makes,		    		:type => String
 	field :has_ingredient,	:type => String
-	field :in_category,			:type => String
+	field :category,				:type => String
 	field :tags,						:type => String
 	
   belongs_to :user
@@ -20,10 +20,10 @@ class Recipe
 
   default_scope order_by([:created_at, :asc])
 	scope :public, 			-> 		{ where(:isPublic => true) }
-	scope :inCategory, 	->(c) { where( in_category: c ) }
+	scope :inCategory, 	->(c) { where( category: c ) }
 
 	def self.in_c(myCategory)
-	  	Recipe.where( in_category: myCategory )
+	  	Recipe.where( category: myCategory )
 	end
 
 

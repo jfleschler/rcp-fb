@@ -1,6 +1,5 @@
 <div class="container">
 <h3>public recipes</h3>
 <hr />
-<div><%= params[:c].strip %></div>
 <%= render :partial => 'shared/recipes_list', :locals => {:recipes => @recipes} %>
 </div>
