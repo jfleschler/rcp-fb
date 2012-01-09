@@ -2,7 +2,7 @@ APP_CONFIG = APP_CONFIG = YAML.load_file(File.join(Rails.root, "config", "app_co
 
 RECIPE_CATEGORIES = APP_CONFIG['categories']
 
-Recipe.each do |r|
+Recipe.all.each do |r|
 	r.in_category = r.category
 	r.save
 end
