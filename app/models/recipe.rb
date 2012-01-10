@@ -13,7 +13,7 @@ class Recipe
 	field :category,				:type => String
 	field :tags,						:type => String
 	field :testing
-	
+
   belongs_to :user
 	has_many :steps, :dependent => :destroy
 
@@ -23,11 +23,11 @@ class Recipe
 	scope :public, -> { where(:isPublic => true) }
 
 	def self.in_c(myCategory)
-	  	Recipe.where( category: myCategory )
+  	Recipe.all( conditions: { category: /#{myCategory}/i } )
 	end
 
 	def self.in_t(myTag)
-	  	Recipe.all( conditions: { tags: /#{myTag}/i } )
+  	Recipe.all( conditions: { tags: /#{myTag}/i } )
 	end
 
 	def step_attributes=(step_attributes)
