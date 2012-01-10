@@ -22,7 +22,7 @@
       </div>
       <div class="clearfix">
         <%= label_tag :tags, "tags" %>
-        <div class="input">
+        <div class="input" id="tag_input" title="seperate with commas">
         <%= text_field_tag :tags, @recipe.tags, :class => "xlarge" %>
         </div>
       </div>
@@ -65,3 +65,9 @@
     </div> 
   <% end %>
 </div> 
+
+<script>
+  $('#tag_input').twipsy({
+          live: true
+    });
+</script>
