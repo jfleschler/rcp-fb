@@ -26,6 +26,9 @@ class Recipe
 	  	Recipe.where( category: myCategory )
 	end
 
+	def self.in_t(myTag)
+	  	Recipe.all(conditions: { name: /#{myTag}/i })
+
 
 	def step_attributes=(step_attributes)
 	  step_attributes.each do |attributes|
