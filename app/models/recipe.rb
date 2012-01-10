@@ -22,7 +22,7 @@ class Recipe
 	scope :public, -> { where(:isPublic => true) }
 
 	def self.in_c(myCategory)
-  	Recipe.all( conditions: { in_category: myCategory } )
+  	Recipe.where( in_category: myCategory )
 	end
 
 	def self.in_t(myTag)
