@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
 
   def index
     if params[:c]
-      @recipes = Recipe.public.in_c(params[:c].strip).to_a
+      @recipes = Recipe.public.in_c(params[:c].strip)
     elsif params[:t]
       @recipes = Recipe.public.in_t(params[:t].strip)
     else
