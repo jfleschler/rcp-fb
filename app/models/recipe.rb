@@ -26,7 +26,7 @@ class Recipe
 	end
 
 	def self.in_t(myTag)
-	  	Recipe.all(conditions: { tags: /#{myTag}/i })
+	  	Recipe.all( conditions: { tags: /#{myTag}/i } )
 	end
 
 	def step_attributes=(step_attributes)
