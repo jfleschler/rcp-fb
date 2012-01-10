@@ -5,6 +5,7 @@ class RecipesController < ApplicationController
   def index
     if params[:c]
       @recipes = Recipe.in_c(params[:c].strip).public
+      @recipes << current_user.recipes.in_c(params[:c].strip) unless current_user.nil?
     elsif params[:t]
       @recipes = Recipe.public.in_t(params[:t].strip)
     else
