@@ -28,7 +28,7 @@ class Recipe
 
 	def self.in_t(myTag, user)
 	  	recipes = Recipe.all(conditions: { tags: /#{myTag}/i })
-	  	recipes << user.recipes.all(conditions: { tags: /#{myTag}/i, isPublic => false})
+	  	#recipes << user.recipes.all(conditions: { tags: /#{myTag}/i, isPublic => false})
 	end
 
 	def step_attributes=(step_attributes)
