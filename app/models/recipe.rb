@@ -10,7 +10,7 @@ class Recipe
   field :temp_unit,  			:type => String
 	field :makes,		    		:type => String
 	field :has_ingredient,	:type => String
-	field :in_category,			:type => String
+	field :category,			:type => String
 	field :tags,						:type => String
 
   belongs_to :user
@@ -22,11 +22,11 @@ class Recipe
 	scope :public, -> { where(:isPublic => true) }
 
 	def self.in_c(myCategory)
-  	Recipe.where( category: myCategory )
+  	where( category: myCategory )
 	end
 
 	def self.in_t(myTag)
-  	Recipe.all( conditions: { tags: /#{myTag}/i } )
+  	all( conditions: { tags: /#{myTag}/i } )
 	end
 
 	def step_attributes=(step_attributes)
