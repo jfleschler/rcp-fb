@@ -17,6 +17,9 @@
 	    		<% if signed_in? %>
 	    			<li><%= link_to "my recipes", current_user %></li>
 	    		<% end %>
+	    		<form class="pull-left">
+            <input type="text" placeholder="find a recipe" />
+          </form>
 	    	</ul>
 	      	<ul class="nav secondary-nav">
 	      		<% if !signed_in? %>
