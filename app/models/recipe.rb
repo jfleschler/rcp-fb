@@ -28,7 +28,7 @@ class Recipe
 
 	def self.in_t(myTag)
 	  	Recipe.all(conditions: { name: /#{myTag}/i })
-
+	end
 
 	def step_attributes=(step_attributes)
 	  step_attributes.each do |attributes|
