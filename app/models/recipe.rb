@@ -19,10 +19,11 @@ class Recipe
 	mount_uploader :image, ImageUploader
 
   default_scope order_by([:created_at, :asc])
-	scope :public, 			-> 		{ where(:isPublic => true) }
+	scope :public, -> { where(:isPublic => true) }
 
 	def self.in_c(myCategory)
-	  	Recipe.where( category: myCategory )
+	  	recipes = Recipe.where( category: myCategory )
+	  	recipes << current_user.recipes.where( category: myCategory, :isPublic => true)
 	end
 
 	def self.in_t(myTag)
