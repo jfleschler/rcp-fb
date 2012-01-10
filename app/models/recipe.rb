@@ -20,15 +20,14 @@ class Recipe
 
   default_scope order_by([:created_at, :asc])
 	scope :public, -> { where(:isPublic => true) }
+	scope :private, -> { where(:isPublic => false) }
 
-	def self.in_c(myCategory, user)
-	  	recipes = Recipe.where( category: myCategory ).public
-	  	recipes << user.recipes.where( category: myCategory, :isPublic => false )
+	def self.in_c(myCategory)
+	  	recipes = Recipe.where( category: myCategory )
 	end
 
-	def self.in_t(myTag, user)
+	def self.in_t(myTag)
 	  	recipes = Recipe.all(conditions: { tags: /#{myTag}/i })
-	  	#recipes << user.recipes.all(conditions: { tags: /#{myTag}/i, isPublic => false})
 	end
 
 	def step_attributes=(step_attributes)
