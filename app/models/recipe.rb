@@ -12,6 +12,7 @@ class Recipe
 	field :has_ingredient,	:type => String
 	field :category,				:type => String
 	field :tags,						:type => String
+	field :testing
 	
   belongs_to :user
 	has_many :steps, :dependent => :destroy
