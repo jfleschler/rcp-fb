@@ -22,11 +22,11 @@ class Recipe
 	scope :public, -> { where(:isPublic => true) }
 
 	def self.in_c(myCategory)
-  	where( my_category: myCategory )
+  	Recipe.where( :my_category.all => [myCategory] )
 	end
 
 	def self.in_t(myTag)
-  	all( conditions: { tags: /#{myTag}/i } )
+  	Recipe.all( conditions: { tags: /#{myTag}/i } )
 	end
 
 	def step_attributes=(step_attributes)
