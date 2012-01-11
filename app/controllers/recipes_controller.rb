@@ -4,9 +4,9 @@ class RecipesController < ApplicationController
 
   def index
     if params[:c]
-      @recipes = Recipe.public.in_c(params[:c].strip).to_a.to_json
+      @recipes = Recipe.public.in_c(params[:c].strip)
     elsif params[:t]
-      @recipes = Recipe.public.in_t(params[:t].strip).to_a.to_json
+      @recipes = Recipe.public.in_t(params[:t].strip)
     else
       @recipes = Recipe.public #.paginate(:page => params[:page], :per_page => 30)
     end
@@ -40,6 +40,7 @@ class RecipesController < ApplicationController
     @recipe = current_user.recipes.find(params[:id])
     @recipe.name = params[:name]
     @recipe.my_category  = params[:my_category]
+    @recipe.filter_category  = params[:my_category]
     @recipe.tags  = params[:tags]
     @recipe.cook_time = params[:cook_time]
     @recipe.cook_temp = params[:cook_temp] 
@@ -59,6 +60,7 @@ class RecipesController < ApplicationController
 	  @recipe = current_user.recipes.new
     @recipe.name = params[:name]
     @recipe.my_category  = params[:my_category]
+    @recipe.filter_category  = params[:my_category]
     @recipe.tags  = params[:tags]
     @recipe.cook_time = params[:cook_time]
     @recipe.cook_temp = params[:cook_temp] 

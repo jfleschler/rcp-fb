@@ -11,6 +11,7 @@ class Recipe
 	field :makes,		    		:type => String
 	field :has_ingredient,	:type => String
 	field :my_category,			:type => String
+	field :filter_category, :type => String
 	field :tags,						:type => String
 
   belongs_to :user
