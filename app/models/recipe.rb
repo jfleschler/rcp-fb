@@ -3,14 +3,14 @@ class Recipe
 	include Mongoid::Timestamps
   
   field :name,  					:type => String
-  field :image,  					:type => String, :default => "recipe_placeholder.png"
+  field :image,  					:type => String,  :default => "recipe_placeholder.png"
   field :isPublic, 				:type => Boolean, :default => false
   field :cook_temp,   		:type => String
   field :cook_time,   		:type => String
   field :temp_unit,  			:type => String
 	field :makes,		    		:type => String
 	field :has_ingredient,	:type => String
-	field :category,			:type => String
+	field :my_category,			:type => String
 	field :tags,						:type => String
 
   belongs_to :user
@@ -22,7 +22,7 @@ class Recipe
 	scope :public, -> { where(:isPublic => true) }
 
 	def self.in_c(myCategory)
-  	where( category: myCategory )
+  	where( my_category: myCategory )
 	end
 
 	def self.in_t(myTag)
