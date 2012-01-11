@@ -1,12 +1,12 @@
 
 
 <% RECIPE_CATEGORIES.each do |category| %>
-<% unless recipes.concat(where(my_category: category)).count == 0 %>
+<% unless recipes.where(my_category: category).count == 0 %>
 <div>
 	<%= category %>
 </div>
 	<div class="images">
-			<% recipes.concat(where(my_category: category)).each do |recipe| %>
+			<% recipes.where(my_category: category).each do |recipe| %>
 				<span class="image_box">
 					<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
 						<span id="p_<%= recipe.id %>"><%= public_private_button recipe %></span>
