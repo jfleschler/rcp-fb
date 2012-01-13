@@ -18,7 +18,6 @@ class SessionsController < ApplicationController
   end
 
   def new
-    session[:return_to] = request.fullpath
     redirect_to '/auth/facebook'
   end
 
