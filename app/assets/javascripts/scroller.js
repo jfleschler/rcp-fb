@@ -35,7 +35,7 @@ MYAPP.FixedInfoScroller = function (options) {
 
 			// Get the current scroll of the window.
 			var viewTop = view.scrollTop() + 80;
-			var fixedElementBottom = fixedElement.offset().top + fixedElement.height() + 3;
+			var fixedElementBottom = fixedElement.offset().top + fixedElement.height();
 
 			// Get the current left offset for FixedElement
 			var fixedElementLeft = (($(document).width() - 940) / 2) + 20
