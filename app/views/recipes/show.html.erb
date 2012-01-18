@@ -2,7 +2,7 @@
 	<div id="editbar" class="topbar" >
 	    <div class="container"> 
 	    <ul class="nav">
-	    <li><%= link_to "( cooking mode )", '/recipe/' + @recipe.id + '/presentation' %></li>
+	    <li><%= link_to "( cooking mode )", '/recipe/' + @recipe.id.to_s + '/presentation' %></li>
 	    </ul>
 	    <% if current_user && current_user.id == @recipe.user_id %>
 				<ul class="nav secondary-nav">
