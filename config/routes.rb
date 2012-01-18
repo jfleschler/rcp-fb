@@ -20,6 +20,7 @@ RcpFb::Application.routes.draw do
   match 'recipes/:id/toggle' => 'recipes#toggle'
   match 'recipes/:id/create_ingredient' => 'recipes#create_ingredient'
   match 'recipes/:id/remove_ingredient' => 'recipes#remove_ingredient'
+  match 'recipes/:id/presentation' => 'recipes#presentation'
   match 'steps/:id/save_note' => 'steps#save_note'
   match 'ingredients/search' => 'ingredients#search'
   

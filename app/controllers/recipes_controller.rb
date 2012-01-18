@@ -144,4 +144,12 @@ class RecipesController < ApplicationController
       format.js
     end
   end
+
+  def presentation
+    @recipe = Recipe.find(params[:id])
+
+    respond_to do |format|
+      format.html
+    end
+  end
 end
