@@ -1,7 +1,7 @@
 class Step
   include Mongoid::Document
   field :step_num,  :type => Integer
-  field :note,  	:type => String
+  field :note,  		:type => String
 
   belongs_to :recipe
   has_many :associations, :dependent => :destroy
