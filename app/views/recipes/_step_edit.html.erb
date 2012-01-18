@@ -18,7 +18,7 @@
 			</div>
 			<div class="row">
 				<div class="span9 columns padright">
-					<ul id="i_step_<%= step.id %>" class="step">
+					<ul id="i_step_<%= step.id %>" class="ul_step">
 						<% step.associations.ordered.each do |association| %>
 							<li id="association_<%= association.id %>" class="a">
 								<%= render :partial => 'shared/options', :locals => {:step => step, :association => association} %>
