@@ -29,8 +29,8 @@ module ApplicationHelper
 		pi = 3.14159265358979
 		e = 2.718281828
 		cY = 5000 / 2
-		a = 1
-		b = 1
+		a = 5
+		b = 5
 
 		ang = (pi / 720) * i
 		y = cY + (a * (Math.sin(ang)) * (e ** (b * ang)))
@@ -41,8 +41,8 @@ module ApplicationHelper
 		pi = 3.14159265358979
 		e = 2.718281828
 		cX = 5000 / 2
-		a = 1
-		b = 1
+		a = 5
+		b = 5
 
 		ang = (pi / 720) * i
 		x = cX + (a * (Math.cos(ang)) * (e ** (b * ang)))
