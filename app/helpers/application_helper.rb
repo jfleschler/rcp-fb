@@ -32,10 +32,10 @@ module ApplicationHelper
 		b = 0.15
 
 		ang = (Math.Pi / 720) * i
-		Y = cY + (a * (Math.Sin(ang)) * (Math.e ^ (b * ang)))
+		Y = cY + (a * (Math.Sin(ang)) * (Math.e ** (b * ang)))
 		
 	end
-	
+
 	def spiral_x(i)
 		cX = 5000 / 2
 		cY = 5000 / 2
@@ -43,6 +43,6 @@ module ApplicationHelper
 		b = 0.15
 
 		ang = (Math.Pi / 720) * i
-		X = cX + (a * (Math.Cos(ang)) * (Math.e ^ (b * ang)))
+		X = cX + (a * (Math.Cos(ang)) * (Math.e ** (b * ang)))
 	end
 end
