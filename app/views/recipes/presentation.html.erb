@@ -1,11 +1,11 @@
 
 <style type="text/css">
-html {
-	overflow: hidden;
-}
-body {
-	background: rgba(0,0,0,0.5);
-}
+	html {
+		overflow: hidden;
+	}
+	body {
+		background: rgba(0,0,0,0.5);
+	}
 </style>
 
 <div id="impress">
@@ -13,7 +13,7 @@ body {
 <div class="span12 columns">
 	<h3 id="step_header">steps</h3>
 		<% @recipe.steps.ordered.each do |s| %>
-			<div id="<%= s.number_to_word %>" class="step slide" data-x="0" data-y="<%= 1000 * s.step_num %>">
+			<div id="<%= s.number_to_word %>" class="step slide" data-x="<%= spiral_x(s.step_num*100) %>" data-y="<%= spiral_y(s.step_num*100) %>" data-rotate="<%= (90 * step_num) - 90 %>">
 				<div class="pull-right"><h2 class="step_num"><%= s.number_string %></h2></div>
 				<h1>what you need ... </h1>
 				<hr />
