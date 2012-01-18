@@ -111,6 +111,11 @@ br.c { clear: both; }
 
     hr {
     	margin-top: -25px;
+    	width: 100%;
+    }
+
+    h1 {
+    	margin-left: -30px;
     }
 }
 
@@ -122,7 +127,7 @@ br.c { clear: both; }
     line-height: 1em;
 
     letter-spacing: 0;
-    
+
     color: black;
     display: block;
     text-align: center;
