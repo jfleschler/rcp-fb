@@ -109,3 +109,15 @@ br.c { clear: both; }
 
     letter-spacing: -1px;
 }
+
+
+/* reset ingredient amount for slide */
+
+.ingredient_amount {
+    font-size: 0.8em;
+    color: black;
+    display: block;
+    text-align: center;
+    margin-top: -8px;
+    white-space: nowrap;
+}

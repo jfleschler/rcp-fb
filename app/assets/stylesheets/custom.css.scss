@@ -240,7 +240,10 @@ div.notice {
 }
 
 h2.step_num {
-  font: 34px/42px 'CombiNumeralsLtdRegular', Arial, sans-serif;letter-spacing: 0;
+  font-family: 'CombiNumeralsLtdRegular';
+  font-size: 40;
+  margin-top: -20px;
+  margin-right: -20px;
 }
 
 .ingredient_amount {
@@ -250,7 +253,6 @@ h2.step_num {
     text-align: center;
     margin-top: -8px;
     white-space: nowrap;
-
 }
 
 .newIngredient {
