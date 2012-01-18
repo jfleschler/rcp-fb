@@ -108,6 +108,10 @@ br.c { clear: both; }
     line-height: 36px;
 
     letter-spacing: -1px;
+
+    hr {
+    	margin-top: -25px;
+    }
 }
 
 
@@ -115,6 +119,10 @@ br.c { clear: both; }
 
 .ingredient_amount {
     font-size: 0.8em;
+    line-height: 1em;
+
+    letter-spacing: 0;
+    
     color: black;
     display: block;
     text-align: center;
