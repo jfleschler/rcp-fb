@@ -110,8 +110,8 @@ br.c { clear: both; }
     letter-spacing: -1px;
 
     hr {
-    	margin-top: -25px;
-    	width: 100%;
+    	margin-top: -20px;
+    	width: 340px;
     }
 
     h1 {
@@ -123,12 +123,12 @@ br.c { clear: both; }
 /* reset ingredient amount for slide */
 
 .ingredient_amount {
-    font-size: 0.8em;
-    line-height: 1em;
+    font-size: 8px;
+    line-height: 10px;
 
     letter-spacing: 0;
 
-    color: black;
+    color: blue;
     display: block;
     text-align: center;
     margin-top: -8px;
