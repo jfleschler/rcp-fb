@@ -33,7 +33,7 @@ module ApplicationHelper
 		b = 0.15
 
 		ang = (pi / 720) * i
-		y = cY + (a * (Math.Sin(ang)) * (e ** (b * ang)))
+		y = cY + (a * (Math.sin(ang)) * (e ** (b * ang)))
 		
 	end
 
@@ -45,6 +45,6 @@ module ApplicationHelper
 		b = 0.15
 
 		ang = (pi / 720) * i
-		x = cX + (a * (Math.Cos(ang)) * (e ** (b * ang)))
+		x = cX + (a * (Math.cos(ang)) * (e ** (b * ang)))
 	end
 end
