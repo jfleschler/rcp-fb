@@ -6,6 +6,7 @@
 			<div class="step slide" data-x="1000" data-y="<%= 1000 * s.step_num %>">
 				<div class="pull-right"><h2 class="step_num"><%= s.number_string %></h2></div>
 				<h1>what you need ... </h1>
+				<hr />
 				<div class="row">
 				<% s.associations.ordered.each do |association| %>
 					<div class="span1 column padright">
@@ -15,8 +16,9 @@
 					</div>
 					<% end %>
 				</div>
-				<br />
+				<br /><br />
 				<h1>here's what to do ... </h1>
+				<hr />
 				<%= s.note %>
 			
 			</div>
