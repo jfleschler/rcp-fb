@@ -70,3 +70,18 @@ br.c { clear: both; }
 	position: relative;
 	float: left;
 }
+
+
+/* fade out inactive slides */
+
+.step {
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.step:not(.active) {
+    opacity: 0.3;
+}
