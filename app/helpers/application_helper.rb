@@ -26,23 +26,25 @@ module ApplicationHelper
 
 
 	def spiral_y(i)
-		cX = 5000 / 2
+		pi = 3.14159265358979
+		e = 2.718281828
 		cY = 5000 / 2
 		a = 0.15
 		b = 0.15
 
-		ang = (Math.Pi / 720) * i
-		y = cY + (a * (Math.Sin(ang)) * (Math.e ** (b * ang)))
+		ang = (pi / 720) * i
+		y = cY + (a * (Math.Sin(ang)) * (e ** (b * ang)))
 		
 	end
 
 	def spiral_x(i)
+		pi = 3.14159265358979
+		e = 2.718281828
 		cX = 5000 / 2
-		cY = 5000 / 2
 		a = 0.15
 		b = 0.15
 
-		ang = (Math.Pi / 720) * i
-		x = cX + (a * (Math.Cos(ang)) * (Math.e ** (b * ang)))
+		ang = (pi / 720) * i
+		x = cX + (a * (Math.Cos(ang)) * (e ** (b * ang)))
 	end
 end
