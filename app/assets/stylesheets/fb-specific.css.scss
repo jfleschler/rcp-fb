@@ -111,7 +111,7 @@ br.c { clear: both; }
 
     hr {
     	margin-top: -20px;
-    	width: 340px;
+    	width: 100%;
     }
 
     h1 {
@@ -123,10 +123,10 @@ br.c { clear: both; }
 /* reset ingredient amount for slide */
 
 .ingredient_amount {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 14px;
 
-    letter-spacing: 0;
+    letter-spacing: 1;
 
     color: black;
     display: block;
