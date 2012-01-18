@@ -28,7 +28,7 @@ module ApplicationHelper
 	def spiral_y(i)
 		pi = 3.14159265358979
 		e = 2.718281828
-		cY = 5000 / 2
+		cY = 0
 		a = 5
 		b = 5
 
@@ -40,7 +40,7 @@ module ApplicationHelper
 	def spiral_x(i)
 		pi = 3.14159265358979
 		e = 2.718281828
-		cX = 5000 / 2
+		cX = 0
 		a = 5
 		b = 5
 
