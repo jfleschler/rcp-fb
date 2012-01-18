@@ -10,7 +10,7 @@ body {
 <div class="span12 columns">
 	<h3 id="step_header">steps</h3>
 		<% @recipe.steps.ordered.each do |s| %>
-			<div id="step-<%= s.step_num %>" class="step slide" data-x="0" data-y="<%= 1000 * s.step_num %>">
+			<div id="<%= s.number_to_word %>" class="step slide" data-x="0" data-y="<%= 1000 * s.step_num %>">
 				<div class="pull-right"><h2 class="step_num"><%= s.number_string %></h2></div>
 				<h1>what you need ... </h1>
 				<hr />
@@ -32,6 +32,7 @@ body {
 		<% end %>
 </div>
 </div>
+
 <div class="hint">
     <p>Use spacebar or arrow keys to navigate</p>
 </div>

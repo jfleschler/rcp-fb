@@ -1,3 +1,4 @@
+require 'integer_to_word'
 class Step
   include Mongoid::Document
   field :step_num,  :type => Integer
@@ -52,6 +53,10 @@ class Step
 			when 19	
 				";"
 		end
+	end
+
+	def number_to_word
+		step_num.to_word.gsub(' ','')
 	end
 
 	private
