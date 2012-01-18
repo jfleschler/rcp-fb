@@ -4,8 +4,9 @@
 	<h3 id="step_header">steps</h3>
 		<% @recipe.steps.ordered.each do |s| %>
 			<div class="step slide" data-x="1000" data-y="<%= 1000 * s.step_num %>">
-				<div class="pull-right"><%= s.number_string %></div>
+				<div class="pull-right"><h2><%= s.number_string %></h2></div>
 				what you need ... <br />
+				<div class="row">
 				<% s.associations.ordered.each do |association| %>
 					<div class="span1 column padright">
 						<div class="association">
@@ -13,7 +14,7 @@
 						</div>
 					</div>
 					<% end %>
-				
+				</div>
 				<br />
 				here's what to do ... <br />
 				<%= s.note %>
