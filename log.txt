@@ -1,0 +1,101 @@
+2012-01-18T21:51:59+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/builder.rb:51:in `instance_eval'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/builder.rb:51:in `initialize'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from /app/config.ru:1:in `new'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from /app/config.ru:1:in `<main>'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/builder.rb:40:in `eval'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/server.rb:200:in `app'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/server.rb:301:in `wrapped_app'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/server.rb:252:in `start'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/commands/server.rb:70:in `start'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/commands.rb:54:in `block in <top (required)>'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/commands.rb:49:in `<top (required)>'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from script/rails:6:in `require'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/commands.rb:49:in `tap'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/builder.rb:40:in `parse_file'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/commands/server.rb:46:in `app'
+2012-01-18T21:51:59+00:00 app[web.1]: 	from script/rails:6:in `<main>'
+2012-01-18T21:52:00+00:00 heroku[web.1]: State changed from starting to crashed
+2012-01-18T21:52:00+00:00 heroku[web.1]: State changed from crashed to created
+2012-01-18T21:52:00+00:00 heroku[web.1]: State changed from created to starting
+2012-01-18T21:52:01+00:00 heroku[web.1]: Process exited
+2012-01-18T21:52:07+00:00 heroku[web.1]: Starting process with command `bundle exec rails server thin -p 25015`
+2012-01-18T21:52:17+00:00 app[web.1]: => Booting Thin
+2012-01-18T21:52:17+00:00 app[web.1]: => Call with -d to detach
+2012-01-18T21:52:17+00:00 app[web.1]: => Rails 3.1.1 application starting in production on http://0.0.0.0:25015
+2012-01-18T21:52:17+00:00 app[web.1]: => Ctrl-C to shutdown server
+2012-01-18T21:52:17+00:00 app[web.1]: Exiting
+2012-01-18T21:52:17+00:00 app[web.1]: 		   ^
+2012-01-18T21:52:17+00:00 app[web.1]: 		Y = cY + (a * (Math.Sin(ang)) * (Math.e ^ (b * ang)))
+2012-01-18T21:52:17+00:00 app[web.1]: /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require': /app/app/helpers/application_helper.rb:35: dynamic constant assignment (SyntaxError)
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:225:in `load_dependency'
+2012-01-18T21:52:17+00:00 app[web.1]: /app/app/helpers/application_helper.rb:46: dynamic constant assignment
+2012-01-18T21:52:17+00:00 app[web.1]: 		X = cX + (a * (Math.Cos(ang)) * (Math.e ^ (b * ang)))
+2012-01-18T21:52:17+00:00 app[web.1]: 		   ^
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `block in require'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:302:in `depend_on'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:348:in `require_or_load'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.1/lib/abstract_controller/helpers.rb:135:in `block in modules_for_helpers'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.1/lib/abstract_controller/helpers.rb:131:in `map!'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.1/lib/abstract_controller/helpers.rb:131:in `modules_for_helpers'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.1/lib/abstract_controller/helpers.rb:159:in `default_helper_module!'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.1/lib/action_controller/metal/helpers.rb:89:in `modules_for_helpers'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.1/lib/abstract_controller/helpers.rb:95:in `helper'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.1/lib/abstract_controller/helpers.rb:22:in `block in inherited'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.1/lib/action_controller/metal/params_wrapper.rb:130:in `inherited'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.1/lib/action_controller/metal/hide_actions.rb:32:in `inherited'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.1/lib/abstract_controller/helpers.rb:22:in `inherited'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.1/lib/abstract_controller/helpers.rb:22:in `class_eval'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.1/lib/action_controller/railties/paths.rb:7:in `block (2 levels) in with'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.1/lib/abstract_controller/railties/routes_helpers.rb:7:in `block (2 levels) in with'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/app/controllers/application_controller.rb:3:in `<top (required)>'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:225:in `load_dependency'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `block in require'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:348:in `require_or_load'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/application/finisher.rb:51:in `block in <module:Finisher>'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:414:in `each'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:414:in `eager_load!'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:302:in `depend_on'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:417:in `block (2 levels) in eager_load!'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:30:in `run'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:30:in `instance_exec'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:416:in `each'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:54:in `each'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:416:in `block in eager_load!'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/config/environment.rb:5:in `<top (required)>'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:54:in `run_initializers'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/config.ru:4:in `block in <main>'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/application.rb:96:in `initialize!'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/builder.rb:51:in `instance_eval'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/config.ru:1:in `<main>'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/config.ru:4:in `require'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/builder.rb:51:in `initialize'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/server.rb:200:in `app'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/config.ru:1:in `new'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/builder.rb:40:in `parse_file'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/commands/server.rb:46:in `app'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/commands/server.rb:70:in `start'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/builder.rb:40:in `eval'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/commands.rb:54:in `block in <top (required)>'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/server.rb:301:in `wrapped_app'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/server.rb:252:in `start'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/commands.rb:49:in `tap'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from script/rails:6:in `<main>'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from script/rails:6:in `require'
+2012-01-18T21:52:17+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.1/lib/rails/commands.rb:49:in `<top (required)>'
+2012-01-18T21:52:19+00:00 heroku[web.1]: State changed from starting to crashed
+2012-01-18T21:52:19+00:00 heroku[web.1]: Process exited
+2012-01-18T21:52:21+00:00 heroku[router]: Error H10 (App crashed) -> GET www.rcpapp.com/recipes/4f03646520e97c0001000002/presentation dyno= queue= wait= service= status=503 bytes=
+2012-01-18T21:52:22+00:00 heroku[router]: Error H10 (App crashed) -> GET www.rcpapp.com/favicon.ico dyno= queue= wait= service= status=503 bytes=
+2012-01-18T21:52:46+00:00 heroku[slugc]: Slug compilation finished
+2012-01-18T21:53:17+00:00 heroku[router]: Error H10 (App crashed) -> GET www.rcpapp.com/recipes/4f03646520e97c0001000002/presentation dyno= queue= wait= service= status=503 bytes=
+2012-01-18T21:53:17+00:00 heroku[router]: Error H10 (App crashed) -> GET www.rcpapp.com/favicon.ico dyno= queue= wait= service= status=503 bytes=
+2012-01-18T21:53:18+00:00 heroku[router]: Error H10 (App crashed) -> GET www.rcpapp.com/recipes/4f03646520e97c0001000002/presentation dyno= queue= wait= service= status=503 bytes=
+2012-01-18T21:53:19+00:00 heroku[router]: Error H10 (App crashed) -> GET www.rcpapp.com/favicon.ico dyno= queue= wait= service= status=503 bytes=
+Terminate batch job (Y/N)? 
