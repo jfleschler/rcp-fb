@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
   before_filter :authenticate, :only => [:create, :destroy, :update]
 
   def index
-    if params[:c]
+    if params[:c] && params[:c] != "all"
       @recipes = Recipe.public.in_c(params[:c].strip)
     elsif params[:t]
       @recipes = Recipe.public.in_t(params[:t].strip)

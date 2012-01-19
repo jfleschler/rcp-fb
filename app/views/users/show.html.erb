@@ -9,9 +9,10 @@
 <hr />
 
 <div class="categories">
-<% RECIPE_CATEGORIES.each do |category| %>
-	<span class="label <%= category.gsub(' ', '') %>"><%= link_to category, :controller => "users", :action => "show", :c => category %></span>
-<% end %>
+	<span class="label notice"><%= link_to "all", :controller => "users", :action => "show", :c => "all" %></span>
+	<% RECIPE_CATEGORIES.each do |category| %>
+		<span class="label <%= category.gsub(' ', '') %>"><%= link_to category, :controller => "users", :action => "show", :c => category %></span>
+	<% end %>
 </div>
 
 <div id="allrecipes">
