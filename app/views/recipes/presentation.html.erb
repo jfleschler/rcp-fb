@@ -1,8 +1,6 @@
 
 <style type="text/css">
-	html {
-		overflow: hidden;
-	}
+
 	body {
 		background: rgba(0,0,0,0.5);
 	}
@@ -14,8 +12,7 @@
         <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
         <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
     </div>
-<div class="span12 columns">
-	<h3 id="step_header">steps</h3>
+
 		<% @recipe.steps.ordered.each do |s| %>
 			<div id="<%= s.number_to_word %>" class="step slide" data-x="0" data-y="<%= s.step_num*800 %>" data-rotate="<%= (90 * s.step_num) - 90 %>">
 				<div class="pull-right"><h2 class="step_num"><%= s.number_string %></h2></div>
@@ -37,7 +34,7 @@
 			
 			</div>
 		<% end %>
-</div>
+
 </div>
 <div class="hint">
     Use spacebar or arrow keys to navigate
