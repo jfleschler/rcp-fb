@@ -5,9 +5,17 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		if @user == current_user
-			@recipes = @user.recipes #.paginate(:page => params[:page], :per_page => 30)
+			if params[:c]
+				@recipes = @user.recipes.in_c(params[:c].strip) #.paginate(:page => params[:page], :per_page => 30)
+			else
+				@recipes = @user.recipes
+			end
 		else
-			@recipes = @user.recipes.public #.paginate(:page => params[:page], :per_page => 30)
+			if params[:c]
+				@recipes = @user.recipes.public.in_c(params[:c].strip) #.paginate(:page => params[:page], :per_page => 30)
+			else
+				@recipes = @user.recipes.public
+			end
 		end
 	end
 

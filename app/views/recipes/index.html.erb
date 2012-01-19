@@ -1,5 +1,12 @@
 <div class="container">
 <h3>public recipes</h3>
 <hr />
+
+<div class="categories">
+<% RECIPE_CATEGORIES.each do |category| %>
+	<span class="label <%= category.gsub(' ', '') %>"><%= link_to category, :controller => "recipes", :action => "index", :c => category %></span>
+<% end %>
+</div>
+
 <%= render :partial => 'shared/recipes_list', :locals => {:recipes => @recipes} %>
 </div>
