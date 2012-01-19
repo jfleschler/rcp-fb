@@ -3,6 +3,12 @@
 	text-align: center
 }
 
+.all {
+	background-color: #B4D1B6;
+	a, a:hover {
+		color: white;
+	}
+}
 .Uncategorized {
 	background-color: grey;
 	a, a:hover {
