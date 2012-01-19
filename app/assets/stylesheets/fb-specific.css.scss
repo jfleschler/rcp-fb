@@ -2,6 +2,15 @@ html {
 	overflow: visible;
 }
 
+#search_box {
+	display: inline;
+	margin-top: -20px;
+
+	input {
+		width: 100%;
+	}
+}
+
 a:hover {
 	text-decoration: none;
 }
