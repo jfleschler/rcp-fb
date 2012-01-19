@@ -3,7 +3,7 @@
 <hr />
 
 <div class="categories">
-	<span class="label notice"><%= link_to "all", :controller => "users", :action => "index", :c => "all" %></span>
+	<span class="label notice"><%= link_to "all", :controller => "recipes", :action => "index", :c => "all" %></span>
 <% RECIPE_CATEGORIES.each do |category| %>
 	<span class="label <%= category.gsub(' ', '') %>"><%= link_to category, :controller => "recipes", :action => "index", :c => category %></span>
 <% end %>
