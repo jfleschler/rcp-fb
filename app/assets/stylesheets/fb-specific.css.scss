@@ -71,6 +71,10 @@ br.c { clear: both; }
 	float: left;
 }
 
+/* IMPRESS.js */
+
+.no-support-message { display:none; }
+.impress-not-supported .no-support-message { display:block; }
 
 /* fade out inactive slides */
 
