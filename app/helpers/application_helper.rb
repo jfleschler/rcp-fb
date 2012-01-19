@@ -23,28 +23,4 @@ module ApplicationHelper
 			image_tag 'recipe_placeholder.png', :size => "150x150" 
 		end
 	end
-
-
-	def spiral_y(i)
-		pi = 3.14159265358979
-		e = 2.718281828
-		cY = 0
-		a = 5
-		b = 5
-
-		ang = (pi / 720) * i
-		y = cY + (a * (Math.sin(ang)) * (e ** (b * ang)))
-		
-	end
-
-	def spiral_x(i)
-		pi = 3.14159265358979
-		e = 2.718281828
-		cX = 0
-		a = 5
-		b = 5
-
-		ang = (pi / 720) * i
-		x = cX + (a * (Math.cos(ang)) * (e ** (b * ang)))
-	end
 end
