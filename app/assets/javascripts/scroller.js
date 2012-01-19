@@ -30,7 +30,7 @@ MYAPP.FixedInfoScroller = function (options) {
 			if (relativeToElementMargin.indexOf("px") > 0){
 				relativeToElementMargin = relativeToElementMargin.replace("px", "");
 			}
-			var relativeToElementBottom = relativeToElement.offset().top + relativeToElement.height() + 15;
+			var relativeToElementBottom = relativeToElement.offset().top + relativeToElement.height() + 20;
 			var relativeToRight = parseInt(relativeToElementMargin);
 
 			// Get the current scroll of the window.
