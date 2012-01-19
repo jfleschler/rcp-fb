@@ -1,12 +1,8 @@
 
 
-<% RECIPE_CATEGORIES.each do |category| %>
-<% unless recipes.where(filter_category: category).count == 0 %>
-<div>
-	<%= category %>
-</div>
+
 	<div class="images">
-			<% recipes.where(filter_category: category).each do |recipe| %>
+			<% recipes.each do |recipe| %>
 				<span class="image_box <%= recipe.category.gsub(' ','') %>">
 					<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
 						<span id="p_<%= recipe.id %>"><%= public_private_button recipe %></span>
@@ -19,9 +15,7 @@
 				</span>
 			<% end %>
 	</div>
-	<br class="c" />
-<% end %>
-<% end %>
+
 
 <script>
     $('img.captify').captify({
