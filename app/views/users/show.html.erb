@@ -8,6 +8,11 @@
 <% end %>
 <hr />
 
+
+<div style="display:inline">
+  <span>search&nbsp;</span>
+  <input type="text" id="recipe_search" class="span8"/>
+</div>
 <div class="categories">
 	<span class="label all"><%= link_to "all", :controller => "users", :action => "show", :c => "all" %></span>
 	<% RECIPE_CATEGORIES.each do |category| %>
@@ -19,3 +24,14 @@
 	<%= render :partial => 'shared/recipes_list', :locals => { :recipes => @recipes } %>
 </div>
 </div>
+
+<script>
+$("#recipe_search").keyup(function() {
+	  $.ajax({
+				    type: 'post', 
+				    data: 'search=' + $('#recipe_search').val(), 
+				    dataType: 'script', 
+				    complete: function(request){ },
+				    url: '/recipes/search'});
+});
+</script>
