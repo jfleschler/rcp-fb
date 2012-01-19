@@ -3,9 +3,10 @@ html {
 }
 
 #search_box {
-	margin-top: -18px;
+	position: absolute;
+	margin-top: -17px;
 	z-index: -1;
-	
+
 	input {
 		width: 100%;
 	}
