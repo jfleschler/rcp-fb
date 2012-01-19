@@ -6,4 +6,5 @@
  *= require bootstrap.min
  *= require custom
  *= require fb-specific
+ *= require categories
 */
