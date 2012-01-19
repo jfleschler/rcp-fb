@@ -30,6 +30,14 @@ class Recipe
   	Recipe.all( conditions: { tags: /#{myTag}/i } )
 	end
 
+  def self.search(search)
+	  if search
+	  	Recipe.all(conditions: { name: /#{search}/i })
+	  else
+	    Recipe.find(:all)
+	  end
+	end
+
 	def step_attributes=(step_attributes)
 	  step_attributes.each do |attributes|
 	    steps.build(attributes)
