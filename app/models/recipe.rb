@@ -19,7 +19,7 @@ class Recipe
 
 	mount_uploader :image, ImageUploader
 
-  default_scope order_by([:created_at, :asc])
+  default_scope order_by([:name, :asc])
 	scope :public, -> { where(:isPublic => true) }
 
 	def self.in_c(myCategory)
