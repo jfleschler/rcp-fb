@@ -50,7 +50,7 @@
 	<div>
 		<br />
 		<% unless @recipe.my_category.nil? || @recipe.my_category.empty? %>
-			<span class="label <%= @recipe.my_category %>"><%= link_to @recipe.my_category, :controller => "recipes", :action => "index", :c => @recipe.my_category %></span>
+			<span class="label <%= @recipe.my_category.gsub(' ', '') %>"><%= link_to @recipe.my_category, :controller => "recipes", :action => "index", :c => @recipe.my_category %></span>
 		<% end %>
 		<% unless @recipe.tags.nil? || @recipe.tags.empty? %>
 			<% @recipe.tags.split(',').each do |tag| %>
