@@ -9,17 +9,20 @@
 		<% @recipe.steps.ordered.each do |s| %>
 			<div id="<%= s.number_to_word %>" class="step slide" data-x="0" data-y="<%= (s.step_num - 1)*800 %>" data-rotate="<%= (90 * s.step_num) - 90 %>">
 				<div class="pull-right"><h2 class="step_num"><%= s.number_string %></h2></div>
-				<h1>what you need ... </h1>
-				<hr />
-				<div class="row">
-				<% s.associations.ordered.each do |association| %>
-					<div class="span1 column padright">
-						<div class="association">
-								<%= render association %>
+				
+				<% unless s.associations.count == 0 %>
+					<h1>what you need ... </h1>
+					<hr />
+					<div class="row">
+					<% s.associations.ordered.each do |association| %>
+						<div class="span1 column padright">
+							<div class="association">
+									<%= render association %>
+							</div>
 						</div>
+						<% end %>
 					</div>
-					<% end %>
-				</div>
+				<% end %>
 				<br />
 				<h1>here's what to do ... </h1>
 				<hr />
