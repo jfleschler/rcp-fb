@@ -155,18 +155,18 @@ class RecipesController < ApplicationController
 
   def search
     if params[:u]
-      user = User.find(params[:u].strip)
-      if user == current_user
+      @user = User.find(params[:u].strip)
+      if @user == current_user
         if params[:c] && params[:c] != "all" && params[:c] != ""
-          @recipes = Recipe.u_search(user, params[:search].strip).in_c(params[:c].strip) #.paginate(:page => params[:page], :per_page => 30)
+          @recipes = Recipe.u_search(@user, params[:search].strip).in_c(params[:c].strip) #.paginate(:page => params[:page], :per_page => 30)
         else
-          @recipes = Recipe.u_search(user, params[:search].strip)
+          @recipes = Recipe.u_search(@user, params[:search].strip)
         end
       else
         if params[:c] && params[:c] != "all" && params[:c] != ""
-          @recipes = Recipe.u_search(user, params[:search].strip).in_c(params[:c].strip).public #.paginate(:page => params[:page], :per_page => 30)
+          @recipes = Recipe.u_search(@user, params[:search].strip).in_c(params[:c].strip).public #.paginate(:page => params[:page], :per_page => 30)
         else
-          @recipes = Recipe.u_search(user, params[:search].strip).public
+          @recipes = Recipe.u_search(@user, params[:search].strip).public
         end
       end
     else
