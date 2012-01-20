@@ -9,7 +9,7 @@
 <div class="categories">
 	<%= link_to 'all', '#', :class => 'label all' %>
 	<% RECIPE_CATEGORIES.each do |category| %>
-		<span class="label <%= category.gsub(' ', '') %>"><%= link_to category, :controller => "recipes", :action => "index", :c => category %></span>
+		<%= link_to category, '#', :class => "label #{category}" %>
 	<% end %>
 </div>
 
