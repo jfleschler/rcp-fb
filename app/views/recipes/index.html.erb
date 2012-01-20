@@ -9,7 +9,7 @@
 <div class="categories">
 	<%= link_to 'all', '#', :class => 'label all' %>
 	<% RECIPE_CATEGORIES.each do |category| %>
-		<%= link_to category, '#', :class => "label #{category.gsub(' ', '')}" %>
+		<%= link_to category, '#', :class => "label #{category.gsub(' ', '')} " %>
 	<% end %>
 </div>
 
@@ -32,7 +32,10 @@
 					    type: 'post', 
 					    data: 'search=' + $('#recipe_search').val() + '&c=' + $(this).text(), 
 					    dataType: 'script', 
-					    complete: function(request){ },
+					    complete: function(request){ 
+					    	$("a.label").removeClass("selected");
+					    	$(this).addClass("selected");
+					    },
 					    url: '/recipes/search'});
 		});
 		

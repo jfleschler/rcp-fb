@@ -38,7 +38,10 @@ $("a.label").click(function() {
 				    type: 'post', 
 				    data: 'search=' + $('#recipe_search').val() + '&c=' + $(this).text(), 
 				    dataType: 'script', 
-				    complete: function(request){ },
+				    complete: function(request){ 
+					    	$("a.label").removeClass("selected");
+					    	$(this).addClass("selected");
+				    },
 				    url: '/users/<%= @user.id %>/r_search'});
 		});
 </script>
