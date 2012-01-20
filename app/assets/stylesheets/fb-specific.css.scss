@@ -5,9 +5,10 @@ html {
 #search_box {
 	position: relative;
 	margin-top: -17px;
-	z-index: 0;
+
 
 	input {
+		z-index: -1;
 		width: 100%;
 	}
 }
