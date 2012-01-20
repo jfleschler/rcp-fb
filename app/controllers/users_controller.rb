@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
 	def r_search
 		@user = User.find(params[:id])
+		@selected_category = params[:c].strip
 		if @user == current_user
       if params[:c] && params[:c] != "all" && params[:c] != ""
         @recipes = Recipe.search(params[:search].strip).in_c(params[:c].strip).where(:user_id => @user.id) #.paginate(:page => params[:page], :per_page => 30)
