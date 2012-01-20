@@ -38,11 +38,12 @@ class Recipe
 	  end
 	end
 
-	def self.u_search(user, search)
+	def self.u_search(uid, search)
+		user = User.find(uid)
 	  if search
 	  	user.recipes.all(conditions: { name: /#{search}/i })
 	  else
-	    user.recipes.all
+	    user.recipes.find(:all)
 	  end
 	end
 
