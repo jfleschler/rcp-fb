@@ -1,6 +1,6 @@
 <div class="images">
 		<% recipes.each do |recipe| %>
-			<span class="image_box <%= recipe.my_category.gsub(' ','') %>">
+			<span class="image_box">
 				<% if @user && @user == current_user && @user.recipes.find(recipe.id) %>
 					<span id="p_<%= recipe.id %>"><%= public_private_button recipe %></span>
 				<% end %>
