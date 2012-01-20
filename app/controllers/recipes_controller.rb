@@ -178,10 +178,10 @@ class RecipesController < ApplicationController
         @recipes = Recipe.search(params[:search].strip).public #.paginate(:page => params[:page], :per_page => 30)
       end
     end
-    
+
     respond_to do |format| 
       format.html 
       format.js 
     end
+  
   end
-end
