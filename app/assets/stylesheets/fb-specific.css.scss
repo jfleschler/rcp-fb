@@ -3,11 +3,12 @@ html {
 }
 
 #search_box {
-	position: relative;
+
 	margin-top: -17px;
 
 
 	input {
+		position: relative;
 		z-index: -1;
 		width: 100%;
 	}
