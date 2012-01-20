@@ -15,7 +15,7 @@
 <div class="categories">
 	<%= link_to 'all', '#', :class => 'label all' %>
 	<% RECIPE_CATEGORIES.each do |category| %>
-		<%= link_to category, '#', :class => "label #{category}" %>
+		<%= link_to category, '#', :class => "label #{category.gsub(' ', '')}" %>
 	<% end %>
 </div>
 
