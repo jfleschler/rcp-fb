@@ -19,4 +19,25 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def r_search
+		@user = User.find(params[:id])
+		if @user == current_user
+      if params[:c] && params[:c] != "all" && params[:c] != ""
+        @recipes = @user.recipes.search(params[:search].strip).in_c(params[:c].strip) #.paginate(:page => params[:page], :per_page => 30)
+      else
+        @recipes = @user.recipes.search(params[:search].strip)
+      end
+    else
+      if params[:c] && params[:c] != "all" && params[:c] != ""
+        @recipes = @user.recipes.search(params[:search].strip).in_c(params[:c].strip).public #.paginate(:page => params[:page], :per_page => 30)
+      else
+        @recipes = @user.recipes.search(params[:search].strip).public
+      end
+    end
+
+    respond_to do |format| 
+      format.js 
+    end
+	end
+
 end
