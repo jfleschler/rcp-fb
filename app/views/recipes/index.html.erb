@@ -32,11 +32,7 @@
 					    type: 'post', 
 					    data: 'search=' + $('#recipe_search').val() + '&c=' + $(this).text(), 
 					    dataType: 'script', 
-					    complete: function(request){ 
-					    	alert($(this).text());
-					    	$("a.label").removeClass("selected");
-					    	$(this).addClass("selected");
-					    },
+					    complete: function(request){ },
 					    url: '/recipes/search'});
 		});
 		
