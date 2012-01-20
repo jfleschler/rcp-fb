@@ -22,7 +22,7 @@
 		$("#recipe_search").keyup(function() {
 	  $.ajax({
 				    type: 'post', 
-				    data: 'search=' + $('#recipe_search').val() + "&c=<%= params[:c].strip || '' %>", 
+				    data: 'search=' + $('#recipe_search').val() + '&c=<%= params[:c].strip || '' %>', 
 				    dataType: 'script', 
 				    complete: function(request){ },
 				    url: '/recipes/search'});
