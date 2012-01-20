@@ -171,7 +171,7 @@ class RecipesController < ApplicationController
       #     @recipes = Recipe.u_search(uid, params[:search].strip).public
       #   end
       # end
-      @recipes = Recipe.search(params[:search].strip).public
+      @recipes = Recipe.u_search(uid,params[:search].strip).public
     else
       if params[:c] && params[:c] != "all" && params[:c] != ""
         @recipes = Recipe.search(params[:search].strip).in_c(params[:c].strip).public
