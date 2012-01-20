@@ -42,7 +42,7 @@ class Recipe
 	  if search
 	  	user.recipes.all(conditions: { name: /#{search}/i })
 	  else
-	    user.recipes.find(:all)
+	    user.recipes
 	  end
 	end
 
