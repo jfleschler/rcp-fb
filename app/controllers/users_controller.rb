@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       if params[:c] && params[:c] != "all" && params[:c] != ""
         @recipes = @user.recipes.search(params[:search].strip).in_c(params[:c].strip) #.paginate(:page => params[:page], :per_page => 30)
       else
-        @recipes = @user.recipes.to_a.search(params[:search].strip)
+        @recipes = Recipe.search(params[:search].strip).where(:user_id => @user.id)
       end
     else
       if params[:c] && params[:c] != "all" && params[:c] != ""
