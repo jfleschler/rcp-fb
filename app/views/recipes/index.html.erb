@@ -2,6 +2,16 @@
 <h3>public recipes</h3>
 <hr />
 
+<div id="search_box">
+  <input type="text" id="recipe_search" placeholder="what are you looking for..." />
+</div>
+<div class="categories">
+	<span class="label all"><%= link_to "all", :controller => "users", :action => "show", :c => "all" %></span>
+	<% RECIPE_CATEGORIES.each do |category| %>
+		<span class="label <%= category.gsub(' ', '') %>"><%= link_to category, :controller => "users", :action => "show", :c => category %></span>
+	<% end %>
+</div>
+
 <div class="categories">
 	<span class="label all"><%= link_to "all", :controller => "recipes", :action => "index", :c => "all" %></span>
 <% RECIPE_CATEGORIES.each do |category| %>
@@ -12,3 +22,14 @@
 <%= render :partial => 'shared/recipes_list', :locals => {:recipes => @recipes} %>
 </div>
 </div>
+
+<script>
+		$("#recipe_search").keyup(function() {
+	  $.ajax({
+				    type: 'post', 
+				    data: 'search=' + $('#recipe_search').val(), 
+				    dataType: 'script', 
+				    complete: function(request){ },
+				    url: '/recipes/search'});
+		});
+</script>

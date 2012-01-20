@@ -154,7 +154,7 @@ class RecipesController < ApplicationController
   end
 
   def search
-    @recipes = Recipe.search(params[:search])
+    @recipes = Recipe.search(params[:search]).in_c(params[:c].strip)
 
     respond_to do |format| 
       format.html 
