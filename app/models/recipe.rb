@@ -38,6 +38,14 @@ class Recipe
 	  end
 	end
 
+	def self.u_search(user, search)
+	  if search
+	  	user.recipes.all(conditions: { name: /#{search}/i })
+	  else
+	    user.recipes.find(:all)
+	  end
+	end
+
 	def step_attributes=(step_attributes)
 	  step_attributes.each do |attributes|
 	    steps.build(attributes)
