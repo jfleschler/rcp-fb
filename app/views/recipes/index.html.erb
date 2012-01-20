@@ -7,7 +7,7 @@
 </div>
 
 <div class="categories">
-	<span class="label all">all</span>
+	<%= link_to 'all', '#', :class => 'label all' %>
 	<% RECIPE_CATEGORIES.each do |category| %>
 		<span class="label <%= category.gsub(' ', '') %>"><%= link_to category, :controller => "recipes", :action => "index", :c => category %></span>
 	<% end %>
@@ -27,7 +27,7 @@
 					    complete: function(request){ },
 					    url: '/recipes/search'});
 			});
-		$("span.label").click(function() {
+		$("a.label").click(function() {
 			$.ajax({
 					    type: 'post', 
 					    data: 'search=' + $('#recipe_search').val() + '&c=' + $(this).text(), 
