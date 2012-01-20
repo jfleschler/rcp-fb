@@ -31,6 +31,6 @@ $("#recipe_search").keyup(function() {
 				    data: 'search=' + $('#recipe_search').val() + "&c=<%= params[:c] %>", 
 				    dataType: 'script', 
 				    complete: function(request){ },
-				    url: '/users/<%= @user.id %>/search'});
+				    url: '/users/<%= @user.id %>/r_search'});
 		});
 </script>
