@@ -1,2 +1,2 @@
 alert("<%= @user2.name unless @user.nil? %>");
-$('#allrecipes').html("<%= escape_javascript(render :partial => 'shared/recipes_list', :locals => { :recipes => @recipes }) %>");
+$('#allrecipes').html("<%= escape_javascript(render :partial => 'shared/recipes_list', :locals => { :recipes => @recipes, :user => @user }) %>");
