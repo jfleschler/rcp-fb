@@ -29,7 +29,7 @@ $("#recipe_search").keyup(function() {
 	  $.ajax({
 				    type: 'post', 
 				    data: 'search=' + $('#recipe_search').val() 
-				    								+ "&user=<%= params[:id] %>"
+				    								+ "&u=<%= params[:id] %>"
 				    								+ "&c=<%= params[:c] %>", 
 				    dataType: 'script', 
 				    complete: function(request){ },
