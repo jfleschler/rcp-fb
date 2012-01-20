@@ -28,7 +28,9 @@
 $("#recipe_search").keyup(function() {
 	  $.ajax({
 				    type: 'post', 
-				    data: 'search=' + $('#recipe_search').val() + "&c=<%= params[:c] %>", 
+				    data: 'search=' + $('#recipe_search').val() 
+				    								+ "&user=<%= params[:id] %>"
+				    								+ "&c=<%= params[:c] %>", 
 				    dataType: 'script', 
 				    complete: function(request){ },
 				    url: '/recipes/search'});
