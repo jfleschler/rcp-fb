@@ -4,6 +4,7 @@ class RecipesController < ApplicationController
 
   def index
     if params[:c] && params[:c] != "all"
+      @selected_category = params[:c].strip
       @recipes = Recipe.public.in_c(params[:c].strip)
     elsif params[:t]
       @recipes = Recipe.public.in_t(params[:t].strip)

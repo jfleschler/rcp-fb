@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		if @user == current_user
 			if params[:c] && params[:c] != "all"
+				@selected_category = params[:c].strip
 				@recipes = @user.recipes.in_c(params[:c].strip) #.paginate(:page => params[:page], :per_page => 30)
 			else
 				@recipes = @user.recipes

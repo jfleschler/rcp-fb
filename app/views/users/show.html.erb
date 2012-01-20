@@ -13,9 +13,9 @@
 </div>
 
 <div class="categories">
-	<span class="label all"><%= link_to "all", :controller => "users", :action => "show", :c => "all" %></span>
+	<%= link_to 'all', '#', :class => 'label all' %>
 	<% RECIPE_CATEGORIES.each do |category| %>
-		<span class="label <%= category.gsub(' ', '') %>"><%= link_to category, :controller => "users", :action => "show", :c => category %></span>
+		<%= link_to category, '#', :class => "label #{category}" %>
 	<% end %>
 </div>
 
@@ -28,7 +28,15 @@
 $("#recipe_search").keyup(function() {
 	  $.ajax({
 				    type: 'post', 
-				    data: 'search=' + $('#recipe_search').val() + "&c=<%= params[:c] %>", 
+				    data: 'search=' + $('#recipe_search').val() + '&c=' + $('#selected_category').val(),
+				    dataType: 'script', 
+				    complete: function(request){ },
+				    url: '/users/<%= @user.id %>/r_search'});
+		});
+$("a.label").click(function() {
+		$.ajax({
+				    type: 'post', 
+				    data: 'search=' + $('#recipe_search').val() + '&c=' + $(this).text(), 
 				    dataType: 'script', 
 				    complete: function(request){ },
 				    url: '/users/<%= @user.id %>/r_search'});
