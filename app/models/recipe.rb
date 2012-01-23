@@ -40,7 +40,7 @@ class Recipe
 
 	def self.u_search(uid, search)
 	  if search
-	  	Recipe.all(conditions: { name: /#{search}/i }).where(:user_id => uid)
+	  	Recipe.any_of( { name: /#{search}/i }, { tags: /#{search}/i } ).where(:user_id => uid)
 	  else
 	    Recipe.find(:all).where(:user_id => uid)
 	  end
