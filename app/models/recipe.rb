@@ -32,7 +32,7 @@ class Recipe
 
   def self.search(search)
 	  if search
-	  	Recipe.all(conditions: { name: /#{search}/i })
+	  	Recipe.any_of( { name: /#{search}/i }, { tags: /#{search}/i } )
 	  else
 	    Recipe.find(:all)
 	  end
