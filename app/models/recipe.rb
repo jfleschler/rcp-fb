@@ -39,11 +39,10 @@ class Recipe
 	end
 
 	def self.u_search(uid, search)
-		user = User.find(uid)
 	  if search
-	  	user.recipes.all(conditions: { name: /#{search}/i })
+	  	Recipe.all(conditions: { name: /#{search}/i }).where(:user_id => uid)
 	  else
-	    user.recipes.find(:all)
+	    Recipe.find(:all).where(:user_id => uid)
 	  end
 	end
 

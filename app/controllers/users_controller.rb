@@ -27,15 +27,15 @@ class UsersController < ApplicationController
 		@selected_category = params[:c].strip
 		if @user == current_user
       if params[:c] && params[:c] != "all" && params[:c] != ""
-        @recipes = Recipe.search(params[:search].strip).in_c(params[:c].strip).where(:user_id => @user.id) #.paginate(:page => params[:page], :per_page => 30)
+        @recipes = Recipe.u_search(@user.id, params[:search].strip).in_c(params[:c].strip) #.paginate(:page => params[:page], :per_page => 30)
       else
-        @recipes = Recipe.search(params[:search].strip).where(:user_id => @user.id)
+        @recipes = Recipe.u_search(@user.id, params[:search].strip)
       end
     else
       if params[:c] && params[:c] != "all" && params[:c] != ""
-        @recipes = Recipe.search(params[:search].strip).in_c(params[:c].strip).where(:user_id => @user.id).public #.paginate(:page => params[:page], :per_page => 30)
+        @recipes = Recipe.u_search(@user.id, params[:search].strip).in_c(params[:c].strip).public #.paginate(:page => params[:page], :per_page => 30)
       else
-        @recipes = Recipe.search(params[:search].strip).where(:user_id => @user.id).public
+        @recipes = Recipe.u_search(@user.id, params[:search].strip).public
       end
     end
 
