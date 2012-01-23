@@ -7,7 +7,7 @@
 </div>
 
 <div class="categories">
-	<%= link_to 'all', '#', :class => 'label all selected' %>
+	<%= link_to 'all', '#', :class => 'label all' %>
 	<% RECIPE_CATEGORIES.each do |category| %>
 		<%= link_to category, '#', :class => "label #{category.gsub(' ', '')} " %>
 	<% end %>
@@ -19,6 +19,12 @@
 </div>
 
 <script>
+		<% if params[:c] %>
+			$("a.<%= params[:c] %>").addClass("selected");
+		<% else %>
+			$("a.all").addClass("selected");
+		<% end %>
+		
 		$("#recipe_search").keyup(function() {
 		  $.ajax({
 					    type: 'post', 
