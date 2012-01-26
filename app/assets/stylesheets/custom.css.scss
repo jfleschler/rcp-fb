@@ -191,6 +191,7 @@ div.notice {
 
   h3 {
     margin-bottom: -6px;
+    line-height: 100%;
   }
 }
 
@@ -323,10 +324,7 @@ li > .ingredient_image {
   cursor: move;
 }
 
-h3 {
-  margin-bottom: -25px;
-  line-height:90%;
-}
+
 
 h3.user_title {
 	margin-bottom: -30px;
