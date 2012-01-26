@@ -1,4 +1,4 @@
 $('#allrecipes').html("<%= escape_javascript(render :partial => 'shared/recipes_list', :locals => { :recipes => @recipes, :selected_category => @selected_category }) %>");
 
-$("a.label").removeClass("selected");
-$("<%= 'a.' + @selected_category.gsub(' ', '') %>").addClass("selected");
+$("a.label").bgColor = #62cffc;
+$("a.<%= @selected_category.gsub(' ', '') %>").bgColor = #0000FF;
