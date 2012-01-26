@@ -20,9 +20,9 @@
 
 <script>
 		<% if params[:c] %>
-			$("a.<%= params[:c] %>").bgColor = #0000FF;
+			$("a.<%= params[:c] %>").addClass("selected");
 		<% else %>
-			$("a.all")..bgColor = #0000FF;
+			$("a.all").addClass("selected");
 		<% end %>
 		
 		$("#recipe_search").keyup(function() {
