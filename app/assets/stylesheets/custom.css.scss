@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
 #ingredient_list   { float: left; width: 200px; position: absolute; left: 0 }
 
 #ingredient_list.fixed-module { position: fixed; top: 70px;}
@@ -272,12 +274,14 @@ a.new {
 }
 
 body {
-	font: 14px/22px 'FolksRegular', Arial, sans-serif;letter-spacing: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 	padding-top: 40px;
 }
 
 label {
-	font: 18px/26px 'FolksRegular', Arial, sans-serif;letter-spacing: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
 }
 
 h1 {
