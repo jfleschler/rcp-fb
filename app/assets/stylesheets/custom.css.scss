@@ -277,6 +277,11 @@ body {
   font-weight: 400; 
 }
 
+label {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400; 
+}
+
 h1 {
   font-family: 'GoodDogRegular';
 	font-size: 48px;
@@ -320,6 +325,7 @@ li > .ingredient_image {
 
 h3 {
   margin-bottom: -30px;
+  line-height:80%;
 }
 
 h3.user_title {
